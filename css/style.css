@@ -44,19 +44,19 @@ TEXT SELECTION STYLES
 ******************************************************************/
 /* Safari, Chrome, iPhones, iPads */
 ::selection {
- background:#E095B4;
+ background:#659cb6;
  color:#fff;
 }
 ::-moz-selection {
- background:#E095B4;
+ background:#659cb6;
  color:#fff;
 }
 ::-webkit-selection {
- background:#E095B4;
+ background:#659cb6;
  color:#fff;
 }
 a {
-	color: #E095B4;
+	color: #659cb6;
 	outline: none;
 }
 /******************************************************************
@@ -65,57 +65,58 @@ General CSS
 									
 #content {
 	flex:0.9;
-	padding-top: 170px;
-	margin-left: 240px;
+	padding-right: 50px;
+	padding-top: 50px;
+	margin-left: 200px;
 	z-index: 1;
 }
 p {
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #848484;
-	font-size: 12pt;
+	font-size: 16pt;
 }
 h1 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #454544;
+	text-decoration: none;
+	font-size: 42pt;
+}
+h2 {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #454544;
+	text-decoration: none;
+	font-size: 36pt;
+}
+h3 {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 30pt;
 }
-h2 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+h4 {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 24pt;
 }
-h3 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+h5 {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
-	font-size: 18pt;
+	font-size: 20pt;
 }
-h4 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+h6 {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 16pt;
-}
-h5 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #454544;
-	text-decoration: none;
-	font-size: 14pt;
-}
-h6 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #454544;
-	text-decoration: none;
-	font-size: 12pt;
 }
 /***************************************************
 COLUMNS and FEATURES
@@ -126,7 +127,7 @@ COLUMNS and FEATURES
     display: flex;
     flex: 0.9;
     margin-right: 0;
-    box-sizing: border-box; /* 确保padding和border不影响宽度 */
+    box-sizing: border-box; 
 }
 
 .one {
@@ -260,13 +261,13 @@ blockquote {
 	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
 	font-size: 11px;
 	text-decoration: none;
-	color: #E095B4;
+	color: #659cb6;
 	float: right;
 	margin-right: 0px;
 	margin-top: 0px;
 }
 a:hover {
-	color: #E35A88;
+	color: #659cb6;
 }
 .spacer {
 	height: 1px;
@@ -274,27 +275,15 @@ a:hover {
 	border-bottom: 1px;
 	border-style: solid;
 	border-color: #d6d6d6;
-	margin: 20px 5px 20px 5px;
+	margin: 20px auto; 
+	width: 360px;
 }
 .blank-spacer {
-	width: 720px;
+	width: 360;
 	height: 1px;
 	clear: both;
 	margin: 10px 5px 10px 5px;
 	padding: 10px 5px 10px 5px;
-}
-.star-divider {
-	background-image:url(../images/star_divider.png);
-	text-align: center;
-	display: block;
-	clear: both;
-	height: 16px;
-	width: 430px;
-	margin-top: 10px;
-	margin-right: auto;
-	margin-bottom: 10px;
-	margin-left: auto;
-	background-repeat: no-repeat;
 }
 #error {
 	display: block;
@@ -313,58 +302,9 @@ a:hover {
 /******************************************************************
 Header & Menu CSS
 ******************************************************************/
-
-#header-wrapper {
-	position: fixed;
-	background-color: #FFF;
-	width: 100%;
-	height: 120px;
-	top: 0px;
-	border-bottom: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #d8d8d8;
-	z-index: 5000;
-}
-#header {
-	width: 960px;
-}
-#logo {
-	float: left;
-	width: 100px;
-	padding: 20px 0 10px 40px;
-}
-#header-text {
-	flex:60%;
-	padding-top: 40px;
-	margin-left: 240px;
-	display: block;
-	height: 20px;
-}
-#header-text h6 {
-	font-size: 12pt;
-	color: #d8d8d8;
-}
-#header-text a {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	color: #d8d8d8;
-	text-decoration: none;
-	font-size: 7pt;
-}
-#social-box {
-	width: 96px;
-	height: 22px;
-	position: fixed;
-	bottom: 40px;
-	left: 30px;
-}
-#social-box li {
-	float: left;
-	padding-left: 6px;
-	display: inline;
-}
 #menu-wrapper {
 	height: 100%;
-	padding-top: 120px;
+	/* padding-top: 120px; */
 	float: left;
 	width: 140px;
 }
@@ -393,30 +333,6 @@ Header & Menu CSS
 	position: fixed;
 	bottom: 10px;
 	left: 20px;
-}
-.facebook a {
-	background-image: url(../images/facebook.png);
-	background-position: 0 0px;
-	display: block;
-	height: 22px;
-	padding-left: 24px;
-	background-repeat: no-repeat
-}
-.facebook a:hover {
-	background-position: 0 -26px;
-	color: #444444;
-}
-.twitter a {
-	background-image: url(../images/twitter.png);
-	background-position: 0 0px;
-	display: block;
-	height: 22px;
-	padding-left: 24px;
-	background-repeat: no-repeat
-}
-.twitter a:hover {
-	background-position: 0 -26px;
-	color: #444444;
 }
 .rss a {
 	background-image: url(../images/rss.png);
@@ -527,16 +443,7 @@ IMG Hovers
 Home Page CSS
 ******************************************************************/
 
-#recent-posts-container {
-	flex:0.9;
-	height: 300px;
-	margin-top: 60px;
-}
-#recent-projects-container {
-	flex:0.9;
-	height: 300px;
-	margin-top: 60px;
-}
+
 .section-description {
 	float: left;
 	width: 110px;
@@ -547,7 +454,7 @@ Home Page CSS
 	border-color: #d8d8d8;
 }
 .recent-summary {
-	flex:0.7;
+	flex:0.9;
 	display: inline;
 }
 .recent-item {
@@ -562,13 +469,13 @@ Home Page CSS
 .recent-summary p {
 	width: 250px;
 	text-align: left;
-	padding: 0px 0px 50px 0px;
+	padding: 0px 50px 50px 0px;
 }
 .recent-summary h6 {
 	width: 250px;
 	font-weight: bold;
 	text-align: left;
-	padding: 5px 0px 0px 0px;
+	padding: 5px 50px 0px 0px;
 }
 .item {
 	width:125px;
@@ -592,7 +499,7 @@ Home Page CSS
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	width: 720px;
+	flex:1;
 	margin-top: 40px;
 }
 #follow h1 {
@@ -608,24 +515,6 @@ Home Page CSS
 #follow p {
 	text-align: center;
 }
-#follow-twitter {
-	text-align: center;
-	width: 150px;
-	height: 80px;
-	display: block;
-	padding-top: 20px;
-	float: left;
-	padding-left: 170px;
-}
-#follow-mail {
-	text-align: center;
-	width: 150px;
-	height: 80px;
-	display: block;
-	padding-top: 20px;
-	float: right;
-	padding-right: 170px;
-}
 /******************************************************************
 About us CSS
 ******************************************************************/
@@ -634,6 +523,8 @@ About us CSS
 	padding-top: 25px;
 	flex:1;
 	padding-bottom: 50px;
+	padding-left: 60px;
+	padding-right: 60px;
 }
 .about p {
 	text-align: justify;
@@ -661,7 +552,7 @@ Portfolio CSS
 	content: '';
 }
 #filter:before {
-	background-position: 0 -47px;
+	background-position: 0 px;
 	left: -78px;
 }
 #filter:after {
@@ -669,61 +560,107 @@ Portfolio CSS
 	right: -78px;
 }
 #filter a {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	font-size: 16px;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-size: 24px;
 	color: #666;
 	display: inline-block;
 	text-decoration: none;
-	height: 39px;
+	height: 50px;
 	line-height: 37px;
-	padding: 0 15px;
+	padding: 0 30px;
 }
 #filter a:hover {
 	text-decoration:none;
 }
 #filter a.active {
-	color: #121212;
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
+	color: #2c2c2c;
 }
 #stage {
-	flex:0.9;
+	flex:1;
 }
 #container {
-	display:block;
-	overflow:hidden;
-	flex:1;
-	margin:0 auto;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	flex-wrap: wrap;
+	margin: 0 auto;
 }
+
 #container li {
-	float: left;
-	/*height: 180px;*/
-	list-style: none outside none;
-	margin: 20px;
+	list-style: none;
+	margin: 50px 60px;
 	position: relative;
-	flex:0.3;
+	display: flex;
+	flex-direction: column;
+	justify-content: top; /* 垂直居中内容 */
+	align-items: center;     /* 水平居中内容 */
+	width: 360px;  /* 增加宽度 */
+	height: 360px; /* 增加高度 */
+	overflow: hidden; /* 确保子元素不溢出 */
 }
+
+#container li img {
+	width: 360px;
+	height: 240px;
+	display: block;
+}
+
+#container li .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 360px;
+	height: 240px;
+	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+#container li:hover .overlay {
+	opacity: 1;
+}
+
+#container li .overlay p {
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
+
 #container li p {
 	margin-left: 0px;
 }
-#container li h6 {
-	padding-top: 5px;
-	font-weight: bold;
+
+#container li h5 {
+	padding-top: 30px;
 	margin-left: 0px;
 }
+
 #container li a:hover {
 	color: #121212;
 }
+
 #container ul {
-	overflow:hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
+
 #container ul.hidden {
-	display:none;
+	display: none;
 }
 /******************************************************************
 This CSS is for the project page
 ******************************************************************/
 #project-title {
 	display: block;
-	font-family: Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light',Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #666;
 	text-decoration: none;
@@ -749,10 +686,10 @@ This CSS is for the project page
 	padding-left: 40px;
 }
 #work h5 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 }
 #work li {
-	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	text-decoration: none;
 	font-size: 12pt;
@@ -771,7 +708,7 @@ This CSS is for the project page
 	text-align: left;
 }
 .project-summary h5 {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 }
 /******************************************************************
 Blog CSS
@@ -797,10 +734,10 @@ Blog CSS
 	height: 270px;
 }
 .blog-item-content {
-	width: 400px;
+	width: 600px;
 	margin-top: 0px;
-	margin-left: 15px;
-	margin-bottom: 50px;
+	margin-left: 0px;
+	margin-bottom: 0px;
 	float: right;
 }
 .blog-item img {
