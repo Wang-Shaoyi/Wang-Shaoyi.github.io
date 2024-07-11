@@ -1,7 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaoyi Wang</title>
 <link rel="shortcut icon" href="favicon.ico" />
 <!-- Load CSS -->
@@ -14,8 +15,6 @@
 <!-- Load custom js -->
 <script type="text/javascript" src="scripts/panelslide.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
-<!-- Load topcontrol js -->
-<script type="text/javascript" src="scripts/scrolltopcontrol.js"></script>
 <!-- Load quicksand script -->
 <script type="text/javascript" src="scripts/jquery.quicksand.js"></script>
 <!-- Load NIVO Slider -->
@@ -31,22 +30,62 @@
 </head>
 <body>
 
+<!-- Language switch button -->
+<div id="lang-switch">
+  <button onclick="switchLang('en')" id="lang-en">English</button>
+  <button onclick="switchLang('cn')" id="lang-cn">中文</button>
+</div>
+
+<script>
+// Function to switch language
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en]').forEach(el => {
+        if (lang === 'en') {
+            el.innerText = el.getAttribute('data-lang-en');
+        } else if (lang === 'cn') {
+            el.innerText = el.getAttribute('data-lang-cn');
+        }
+      });
+      // Update button styles
+      document.getElementById('lang-en').classList.remove('selected');
+      document.getElementById('lang-cn').classList.remove('selected');
+      document.getElementById('lang-' + lang).classList.add('selected');
+    }
+
+    // Initialize with English selected
+    switchLang('en');
+</script>
+
 <!--This is the START of the menu-->
 <div id="menu-wrapper">
 	<div id="profile">
         <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-        <h2>Shaoyi Wang</h2>
+        <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
         <p>MS in Architecture Candidate</p>
         <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
     </div>
 	<div id="main-menu">
 		<ul>
-			<li><a class="selected" href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="Resume.html">Resume</a></li>
+			<li><a href="#index">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+			<li><a href="resume.html">Resume</a></li>
 		</ul>
 	</div>
+
+	<script>
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+	
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+
+	</script>
+
 	<!--This is the START of the footer-->
 	<div id="footer">
 		<h6>© 2024 - Shaoyi Wang</h6>
@@ -58,17 +97,18 @@
 <!--This is the START of the content-->
 <div id="content">
 	<!--This is the START of the NIVO slider-->
+	<div id="index"></div>
 	<div class="slider-wrapper theme-effe">
 		<div id="slider" class="nivoSlider"> 
-			<img src="images/slider/slide1.jpg" alt="" title="#img1" /> 
-			<img src="images/slider/slide2.jpg" alt="" title="#img2" /> 
-			<img src="images/slider/slide3.jpg" alt="" title="#img3" /> 
-			<img src="images/slider/slide4.jpg" alt="" title="#img4" /> 
+			<img src="images/slider/slide1.png" width=1080px alt="" title="#img1" /> 
+			<img src="images/slider/slide2.png" width=1080px alt="" title="#img2" /> 
+			<img src="images/slider/slide3.png" width=1080px alt="" title="#img3" /> 
+			<img src="images/slider/slide4.png" width=1080px alt="" title="#img4" /> 
 		</div>
 	</div>
 	<!--END of NIVO Slider-->
 	<!--This is the START of the recent posts-->
-	<div class="about">
+	<div id="about" class="about">
 		<h5>About</h5>
 		<p>Shaoyi Wang is a Master of Science in Architecture student studying at the College
 			of Environmental Design, UC Berkeley. Her research interest focuses on innovative
@@ -90,6 +130,7 @@
 	</div>
 	<div class="spacer"></div>
 	
+	<div id="portfolio"></div>
 	<!--This is the START of the portfolio section-->
 	<div id="filter"></div>
 	<div id="container">
@@ -168,6 +209,27 @@
 	  </ul>
 	</div>
 	<!--END of portfolio section-->
+
+	<script>
+        // 检测当前页面URL
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentUrl = window.location.href;
+            var indexSection = document.getElementById('index');
+            var aboutSection = document.getElementById('about');
+            var portfolioSection = document.getElementById('portfolio');
+            
+            if (currentUrl.includes('index.html')) {
+                // 主页
+                window.scrollTo(0, indexSection.offsetTop);
+            } else if (currentUrl.includes('about.html')) {
+                // 关于页
+                window.scrollTo(0, aboutSection.offsetTop);
+            } else if (currentUrl.includes('portfolio.html')) {
+                // 作品集页
+                window.scrollTo(0, portfolioSection.offsetTop);
+            }
+        });
+    </script>
   </div>
   <!--END of content-->
 </div>

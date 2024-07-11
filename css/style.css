@@ -1074,3 +1074,39 @@ input:focus, textarea:focus, button:hover {
 input:focus, textarea:focus {
 	color: #c9c9c9;
 }
+
+
+#lang-switch {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+#lang-switch button {
+	background: #fff;
+	color: #666;
+	border: none;
+	padding: 5px 5px;
+	cursor: pointer;
+	margin-left: 5px;
+	outline: none; 
+}
+#lang-switch button.selected,
+#lang-switch button:hover {
+	background: #fff;
+	color: #659cb6;
+	border: none;
+	cursor: pointer;
+	outline: none; 
+}
+
+#pdf-container {
+	flex: 1;
+	overflow: auto;
+	margin-left: 80px;
+	margin-right: 80px;
+}
+iframe {
+	width: 100%;
+	height: 1200px;
+	border: none;
+}
