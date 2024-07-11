@@ -50,10 +50,16 @@
       document.getElementById('lang-en').classList.remove('selected');
       document.getElementById('lang-cn').classList.remove('selected');
       document.getElementById('lang-' + lang).classList.add('selected');
+
+	  // Save the selected language to localStorage
+	  localStorage.setItem('selectedLanguage', lang);
     }
 
     // Initialize with English selected
-    switchLang('en');
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        switchLang(savedLang);
+    });
 </script>
 
 <!--This is the START of the menu-->
@@ -61,15 +67,15 @@
 	<div id="profile">
         <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
         <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
-        <p>MS in Architecture Candidate</p>
+        <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
         <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
     </div>
 	<div id="main-menu">
 		<ul>
-			<li><a href="#index">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#portfolio">Portfolio</a></li>
-			<li><a href="resume.html">Resume</a></li>
+			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页">Home</a></li>
+			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
+			<li><a href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
+			<li><a href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
 		</ul>
 	</div>
 
@@ -100,17 +106,19 @@
 	<div id="index"></div>
 	<div class="slider-wrapper theme-effe">
 		<div id="slider" class="nivoSlider"> 
-			<img src="images/slider/slide1.png" width=1080px alt="" title="#img1" /> 
-			<img src="images/slider/slide2.png" width=1080px alt="" title="#img2" /> 
-			<img src="images/slider/slide3.png" width=1080px alt="" title="#img3" /> 
-			<img src="images/slider/slide4.png" width=1080px alt="" title="#img4" /> 
+			<img src="images/slider/slide1.png" width=960px alt="" title="#img1" /> 
+			<img src="images/slider/slide2.png" width=960px alt="" title="#img2" /> 
+			<img src="images/slider/slide3.png" width=960px alt="" title="#img3" /> 
+			<img src="images/slider/slide4.png" width=960px alt="" title="#img4" /> 
 		</div>
+		<p><br><br></p>
 	</div>
 	<!--END of NIVO Slider-->
 	<!--This is the START of the recent posts-->
 	<div id="about" class="about">
-		<h5>About</h5>
-		<p>Shaoyi Wang is a Master of Science in Architecture student studying at the College
+		<h5 data-lang-en="About" data-lang-cn="简介">About</h5>
+		<p>
+			Shaoyi Wang is a Master of Science in Architecture student studying at the College
 			of Environmental Design, UC Berkeley. Her research interest focuses on innovative
 			structures and computational design, aiming to integrate lightweight structures,
 			parametric design, and digital fabrication into mainstream architectural practices.

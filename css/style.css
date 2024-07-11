@@ -353,7 +353,8 @@ Header & Menu CSS
 #main-menu a {
 	color: #707070;
 	text-decoration: none;
-	font-size: 14pt;
+	font-size: 12pt;
+	line-height: 1.5; 
 }
 #main-menu a:hover {
 	color: #659cb6;
@@ -452,82 +453,7 @@ IMG Hovers
 	-webkit-box-shadow: 0px 0px 5px #999;
 	box-shadow: 0px 0px 5px #999;
 }
-/******************************************************************
-Home Page CSS
-******************************************************************/
 
-
-.section-description {
-	float: left;
-	width: 110px;
-	height: 160px;
-	padding-right: 20px;
-	border-right: 1px;
-	border-style: solid;
-	border-color: #d8d8d8;
-}
-.recent-summary {
-	flex:0.9;
-	display: inline;
-}
-.recent-item {
-	padding-left: 40px;
-	float: left;
-	width: 260px;
-}
-.recent-item-last {
-	float: right;
-	width: 250px;
-}
-.recent-summary p {
-	width: 250px;
-	text-align: left;
-	padding: 0px 50px 50px 0px;
-}
-.recent-summary h6 {
-	width: 250px;
-	font-weight: bold;
-	text-align: left;
-	padding: 5px 50px 0px 0px;
-}
-.item {
-	width:125px;
-	height:125px;
-	border:4px solid #222;
-	margin:5px 0px 5px 0px;
-	/* required to hide the image after resized */
-	overflow:hidden;
-	/* for child absolute position */
-	position:relative;
-	/* display div in line */
-	float:left;
-}
-#recent-text {
-	text-align: center;
-}
-#recent-text h5 {
-	padding-bottom: 0px;
-}
-.recent-gallery {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	flex:1;
-	margin-top: 40px;
-}
-#follow h1 {
-	text-align: center;
-	font-size: 22px;
-	padding-top: 100px;
-	clear: both;
-}
-#follow h3 {
-	text-align: center;
-	padding: 16px;
-}
-#follow p {
-	text-align: center;
-}
 /******************************************************************
 About us CSS
 ******************************************************************/
@@ -538,10 +464,12 @@ About us CSS
 	padding-bottom: 50px;
 	padding-left: 60px;
 	padding-right: 60px;
+	line-height: 1.5;
 }
 .about p {
 	text-align: justify;
 	font-size: 16px;
+	line-height: 1.5;
 }
 .team-text {
 	text-align: center;
@@ -890,148 +818,7 @@ Blog CSS
 	float: left;
 	height: 20px;
 }
-.comments-block {
-	flex:1;
-}
-.comments-title {
-	padding-top: 40px;
-}
-.comments-block a {
-	flex:1;
-}
-.avatar {
-	padding-top: 6px;
-	float: left;
-	width: 40px;
-}
-.post-author {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #454544;
-	text-decoration: none;
-	font-size: 14pt;
-	cursor: pointer;
-}
-.comment-info {
-	width: 400px;
-	display: block;
-	padding-left: 60px;
-}
-.comment-body {
-	padding-top: 15px;
-}
-.reply {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #454544;
-	text-decoration: none;
-	font-size: 10pt;
-}
-.required-comment {
-	padding-bottom: 20px;
-}
-.short-label {
-	width: 40px;
-}
-.input-block {
-	width: 180px;
-	padding-right: 65px;
-	height: 50px;
-	display: inline-block;
-}
-.input-block-long {
-	width: 140px;
-	display: inline-block;
-}
-.short-field {
-	width: 170px;
-}
-.long-field {
-	width: 200px;
-}
-#comment {
-	width: 700px;
-}
-#comment-button {
-	height: 30px;
-	padding: 5px;
-}
-/***************************************************
-Contact CSS
-***************************************************/
 
-#contact {
-	display: inline;
-	position: relative;
-	width: 450px;
-	float: left;
-	margin: 0px;
-	margin-top: 20px;
-	margin-bottom: 40px;
-	padding: 20px 70px 20px 0px;
-	;
-	border-right: 1px;
-	border-style: solid;
-	border-color: #d6d6d6;
-}
-#contactform {
-	padding-top: 10px;
-}
-#contact p {
-	padding-top: 5px;
-}
-#contactform h6 {
-	font-size: 12px;
-	color: #848484;
-	float: left;
-}
-#contactform .boxes {
-	float: left;
-	display: block;
-	margin-bottom: 20px;
-	margin-top: 20px;
-}
-#contactform .box {
-	width: 390px;
-	margin-bottom: 18px;
-	margin-top: 2px;
-	margin-left: 60px;
-}
-#contactform .msgbox {
-	margin-bottom: 18px;
-	margin-top: 2px;
-	margin-left: 60px;
-	width: 400px;
-}
-#contactform .message {
-	text-align: left;
-	margin-top: 2px;
-	height: 135px;
-	width: 400px;
-	padding: 5px;
-}
-#contactform #sender_name {
-	width: 320px;
-}
-#contactform #sender_email {
-	width: 320px;
-}
-#contactform #sender_url {
-	width: 320px;
-}
-#contactform .submitbtn {
-	width: 120px;
-	padding-top: 15px;
-	margin-left: 60px;
-}
-.contactinformation .overline {
-	margin-bottom: 15px;
-}
-#contactinfo {
-	padding-right: 10px;
-	padding-top: 80px;
-	float: right;
-}
 /******************************************************************
 This is the buttons and inputs CSS
 ******************************************************************/

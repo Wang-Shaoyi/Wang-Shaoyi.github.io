@@ -29,20 +29,52 @@
 </head>
 <body>
 
+<!-- Language switch button -->
+<div id="lang-switch">
+  <button onclick="switchLang('en')" id="lang-en">English</button>
+  <button onclick="switchLang('cn')" id="lang-cn">中文</button>
+</div>
+
+<script>
+// Function to switch language
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en]').forEach(el => {
+        if (lang === 'en') {
+            el.innerText = el.getAttribute('data-lang-en');
+        } else if (lang === 'cn') {
+            el.innerText = el.getAttribute('data-lang-cn');
+        }
+      });
+      // Update button styles
+      document.getElementById('lang-en').classList.remove('selected');
+      document.getElementById('lang-cn').classList.remove('selected');
+      document.getElementById('lang-' + lang).classList.add('selected');
+
+	  // Save the selected language to localStorage
+	  localStorage.setItem('selectedLanguage', lang);
+    }
+
+    // Initialize with English selected
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        switchLang(savedLang);
+    });
+</script>
+
 <!--This is the START of the menu-->
 <div id="menu-wrapper">
 	<div id="profile">
-        <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-        <h2>Shaoyi Wang</h2>
-        <p>MS in Architecture Candidate</p>
-        <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
+      <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
+      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
+      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
+      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
     </div>
 	<div id="main-menu">
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="Resume.html">Resume</a></li>
+			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页">Home</a></li>
+			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
+			<li><a href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
+			<li><a class='selected' href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
 		</ul>
 	</div>
 	<!--This is the START of the footer-->
@@ -62,19 +94,26 @@
     <div id="slider-shadow"></div>
   </div>
   <!--END of NIVO Slider-->
+
+
   <!--This is the START of the project-->
   <div class="project">
     <div id="description">
-      <h3>Project Example</h3>
-      <p>Ut ligula sapien, vulputate nec vulputate eget, semper ac augue. Sed varius ante leo, vel tristique libero. 
-        Aenean eros felis, auctor a congue ut, pellentesque vel elit. Vivamus imperdiet ultricies diam sit amet euismod. 
-        Duis nec purus quis neque commodo porta sit amet vitae mi. Curabitur vestibulum ante convallis enim fringilla posuere. In ac erat ut magna cursus faucibus.</p>
+      <h3 data-lang-en="Title" data-lang-cn="标题">Title</h3>
+      <p data-lang-en="Ut ligula sapien, vulputate nec vulputate eget, semper ac augue. Sed varius ante leo, vel tristique libero. 
+      Aenean eros felis, auctor a congue ut, pellentesque vel elit. Vivamus imperdiet ultricies diam sit amet euismod. 
+      Duis nec purus quis neque commodo porta sit amet vitae mi. Curabitur vestibulum ante convallis enim fringilla posuere. In ac erat ut magna cursus faucibus." 
+      
+      data-lang-cn="游戏讲述了平凡的客栈小伙计李逍遥因为机缘巧合结识了女娲族后裔赵灵儿。赵灵儿所居之仙灵岛意外遭人袭击，李逍遥遂担任起护送灵儿往苗疆寻母的重任。
+      在旅程中，李逍遥先后结识了林月如、阿奴。在赵灵儿帮助苗人祈雨解旱、惩奸除恶的过程之中，赵灵儿的身世之谜以及她母亲的下落，也终究水落石出。
+      此时，拜月教主的阴谋摆在众人的眼前，李逍遥、赵灵儿等人却不知这与拜月教主一战，将会铸成一段永恒的悲剧。"></p>
     </div>
   </div>
   <!--END of project-->
+  
   <!--This is the START of the gallery-->
   <div class="project-summary">
-    <h5>Other Works</h5>
+    <h5 data-lang-en="Related Works" data-lang-cn="相关作品">Other Works</h5>
   </div>
   <!--END of gallery-->
   <div class="spacer"></div>
