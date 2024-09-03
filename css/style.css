@@ -16,6 +16,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	height: auto;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -77,28 +78,28 @@ p {
 	font-size: 14pt;
 }
 h1 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 36pt;
 }
 h2 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 30pt;
 }
 h3 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 24pt;
 }
 h4 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
@@ -213,59 +214,7 @@ blockquote {
 	background-repeat: no-repeat;
 	background-position: left top;
 }
-.styled-list-check li {
-	font-family: Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #666;
-	text-decoration: none;
-	font-size: 14px;
-	background-image: url(../images/check.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 16px;
-}
-.styled-list-check {
-	padding-bottom: 60px;
-}
-.styled-list-dot li {
-	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	text-decoration: none;
-	font-size: 14px;
-	color: #666;
-	background-image: url(../images/dot.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 20px;
-	padding-top: 2px;
-}
-.styled-list-dot {
-	padding-bottom: 60px;
-}
-.styled-list-star li {
-	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	text-decoration: none;
-	font-size: 14px;
-	color: #666;
-	background-image: url(../images/star.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 20px;
-	padding-top: 2px;
-}
-.styled-list-star {
-	padding-bottom: 60px;
-}
-.readmore {
-	font-family: 'Droid Sans', Verdana, Arial, sans-serif;
-	font-size: 11px;
-	text-decoration: none;
-	color: #659cb6;
-	float: right;
-	margin-right: 0px;
-	margin-top: 0px;
-}
+
 a:hover {
 	color: #659cb6;
 }
@@ -292,22 +241,20 @@ a:hover {
 	margin-right: auto;
 	margin-top: 300px;
 }
-#sucess {
-	display: block;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 300px;
-}
+
 /******************************************************************
 Header & Menu CSS
 ******************************************************************/
 #menu-wrapper {
-	height: 100%;
-	/* padding-top: 120px; */
-	float: left;
-	width: 200px;
+    height: 100vh; /* 让菜单区域的高度覆盖整个视口 */
+    width: 16.67%;
+    background: #ffffff; /* 设置背景颜色 */
+    float: left;
+    position: fixed; /* 确保菜单区域始终固定在页面左侧 */
+    top: 0;
+    left: 0;
 }
+
 #profile {
     text-align: left;
     margin-bottom: 20px;
@@ -362,96 +309,34 @@ Header & Menu CSS
 #main-menu li {
 	padding: 5px 0 5px 0;
 }
-#main-menu .selected {
+#main-menu a.selected {
 	color: #659cb6;
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
 }
+
 #footer h6 {
 	font-size: 10px;
 	position: fixed;
 	bottom: 10px;
 	left: 20px;
 }
-.rss a {
-	background-image: url(../images/rss.png);
-	background-position: 0 0px;
-	display: block;
-	height: 22px;
-	padding-left: 24px;
-	background-repeat: no-repeat
-}
-.rss a:hover {
-	background-position: 0 -26px;
-	color: #444444;
-}
-#slide-panel {
-	position: fixed;
-	top: 120px;
-	left: 240px;
-	height: 420px;
-	width: 720px;
-	display: none;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #e2e2e2;
-	background-color: #FFF;
-	margin: auto;
-	text-align: center;
-	margin-bottom: 5px;
-	z-index: 6000;
-}
-.slide {
-	background-image: url(../images/slide_button.png);
-	background-repeat: no-repeat;
-	position: fixed;
-	top: 33px;
-	left: 800px;
-	z-index: 5000;
-}
-.btn-slide {
-	text-align: center;
-	width: 120px;
-	height: 60px;
-	display: block;
-	color: #fff;
-	text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	font-size: 1em;
-	margin-right: auto;
-	margin-left: auto;
-	line-height: 22px;
-	z-index: 5000;
-}
-
 /******************************************************************
-IMG Hovers
+Welcome CSS
 ******************************************************************/
+.welcome {
+    text-align: center; 
+    padding: 10px; 
+    font-family: 'Calibri Light', Verdana, Arial, sans-serif; 
+    padding-left: 7%;
+    padding-right: 7%;
+}
 
-.recent-summary img:hover {
-	-moz-box-shadow: 0px 0px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
-}
-.recent-gallery img:hover {
-	-moz-box-shadow: 0px 0px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
-}
-.about-item img:hover {
-	-moz-box-shadow: 0px 0px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
-}
-.blog-item img:hover {
-	-moz-box-shadow: 0px 0px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
-}
-.blog-item-single img:hover {
-	-moz-box-shadow: 0px 0px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px #999;
-	box-shadow: 0px 0px 5px #999;
+.welcome p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #659cb6;
+    font-style: italic; /* 将文本设置为斜体 */
 }
 
 /******************************************************************
@@ -461,9 +346,9 @@ About us CSS
 .about {
 	padding-top: 25px;
 	flex:1;
-	padding-bottom: 50px;
-	padding-left: 60px;
-	padding-right: 60px;
+	padding-bottom: 20px;
+	padding-left: 7%;
+	padding-right: 7%;
 	line-height: 1.5;
 }
 .about p {
@@ -471,70 +356,77 @@ About us CSS
 	font-size: 16px;
 	line-height: 1.5;
 }
-.team-text {
-	text-align: center;
-}
+
 /******************************************************************
 Portfolio CSS
 ******************************************************************/
+.portfolio {
+	padding-top: 25px;
+	flex:1;
+	padding-bottom: 0px;
+	padding-left: 7%;
+	padding-right: 7%;
+}
+.portfolio p {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 16px;
+}
 
+/*************Filter****************/
 #filter {
 	display: block;
 	height: 30px;
-	margin-left: 20px;
-	margin-top: 40px;
-	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 30px;
 	position: relative;
 	text-align: center;
-	flex: 0.9;
+	flex: 1;
 }
 
-#filter:before, #filter:after {
-	height: 43px;
-	position: absolute;
-	top: 0;
-	width: 78px;
-	content: '';
-}
-
-#filter:before {
-	background-position: 0 0;
-	left: -78px;
-}
-
-#filter:after {
-	background-position: 0 0;
-	right: -78px;
-}
-
-#filter a {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
-	font-size: 20px;
+.filter-btn {
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
+	font-size: 18px;
 	color: #666;
-	display: inline-block;
 	text-decoration: none;
 	height: 50px;
 	line-height: 37px;
-	padding: 0 30px;
-	transition: color 0.3s; /* 添加过渡效果 */
+	transition: color 0.3s;
+	padding: 10px 30px;
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+	/* 防止边缘和放大效果 */
+	box-shadow: none;
+	transform: none;
 }
 
-#filter a:hover {
-	color: #659cb6; /* 悬停时更改颜色 */
-	text-decoration: none;
-}
-
-#filter a:hover {
-	text-decoration: none;
-}
-
-#filter a.active {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+.filter-btn:hover {
 	color: #659cb6;
+	text-decoration: underline;
+	/* 防止边缘和放大效果 */
+	border: none;
+	box-shadow: none;
+	transform: none;
 }
+
+.filter-btn.active {
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
+	color: #659cb6;
+	text-decoration: underline;
+	/* 防止边缘和放大效果 */
+	box-shadow: none;
+	transform: none;
+}
+
 #stage {
-	flex:1;
+	padding-left: 7%;
+	padding-right: 7%;
 }
+
+/*************container****************/
 #container {
 	display: flex; 
 	justify-content: center;
@@ -544,25 +436,28 @@ Portfolio CSS
 	margin: 0;
 }
 
+
+
 #container li {
 	list-style: none;
-	margin-left: 50px;
-	margin-right: 50px;
+	margin-left: 5px;
+	margin-right: 5px;
 	margin-top: 0px;
-	margin-bottom: 0px;
+	margin-bottom: 20px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: top; /* 垂直居中内容 */
 	align-items: center;     /* 水平居中内容 */
-	width: 360px;  /* 增加宽度 */
+	width: 420px;  /* 增加宽度 */
 	height: 320px; /* 增加高度 */
 	overflow: hidden; /* 确保子元素不溢出 */
 }
 
 #container li img {
-	width: 360px;
-	height: 240px;
+	width: 420px;  /* 增加宽度 */
+	height: 270px; /* 增加高度 */
+	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
 }
 
@@ -570,8 +465,8 @@ Portfolio CSS
 	position: absolute;
 	top: 0;
 	left: 0px;
-	width: 360px;
-	height: 240px;
+	width: 100%;
+	height: 270px;
 	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
 	color: white;
 	display: flex;
@@ -587,7 +482,6 @@ Portfolio CSS
 
 #container li .overlay p {
 	margin: 0;
-	/* padding: 10px; */
 	text-align: center;
 }
 
@@ -596,7 +490,6 @@ Portfolio CSS
 }
 
 #container li h5 {
-	padding-top: 10px;
 	margin-left: 0px;
 	text-align: left;
 	font-size: 18px;
@@ -616,6 +509,7 @@ Portfolio CSS
 #container ul.hidden {
 	display: none;
 }
+
 /******************************************************************
 This CSS is for the project page
 ******************************************************************/
@@ -677,154 +571,13 @@ This CSS is for the project page
 .project-summary h5 {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 }
-/******************************************************************
-Blog CSS
-******************************************************************/
-
-#blog {
-	display: block;
-	flex:0.9;
-	margin-top: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 100px;
-}
-.blog-item-info {
-	padding: 10px 0 15px 0;
-	height: 15px;
-	width: 400px;
-	float: right;
-}
-.blog-item {
-	clear: both;
-	flex:1;
-	height: 270px;
-}
-.blog-item-content {
-	width: 600px;
-	margin-top: 0px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	float: right;
-}
-.blog-item img {
-	margin-bottom: 50px;
-	float: left;
-}
-.blog-item-content h5 {
-	font-weight: bold;
-}
-.blog-item-content p {
-	padding: 0px 5px 5px 0px;
-	text-align: justify;
-}
-#blog .readmore {
-	float: left;
-	padding-top: 20px;
-}
-.user {
-	background-image: url(../images/user.png);
-	background-position: 0 1px;
-	padding-bottom: 1px;
-	margin-right: 15px;
-	display: inline;
-	text-decoration: none;
-	font-size: 12px;
-	height: 15px;
-	color: #d6d6d6;
-	padding-left: 20px;
-	background-repeat: no-repeat
-}
-.user:hover {
-	background-position: 0 -17px;
-	color: #444444;
-}
-.comments {
-	background-image: url(../images/comments.png);
-	background-position: 0 1px;
-	padding-bottom: 1px;
-	margin-right: 15px;
-	display: inline;
-	text-decoration: none;
-	font-size: 12px;
-	height: 15px;
-	color: #d6d6d6;
-	padding-left: 20px;
-	background-repeat: no-repeat
-}
-.comments:hover {
-	background-position: 0 -17px;
-	color: #444444;
-}
-.tags {
-	background-image: url(../images/tags.png);
-	background-position: 0 1px;
-	padding-bottom: 1px;
-	margin-right: 15px;
-	display: inline;
-	text-decoration: none;
-	font-size: 12px;
-	height: 15px;
-	color: #d6d6d6;
-	padding-left: 20px;
-	background-repeat: no-repeat
-}
-.tags:hover {
-	background-position: 0 -17px;
-	color: #444444;
-}
-#pagination {
-	display: inline-block;
-	height: 8px;
-	text-align: center;
-	flex:1;
-	font-size: 10pt;
-}
-#pagination a {
-	color: #707070;
-	text-decoration: none;
-}
-#pagination .active {
-	color: #444444;
-	text-decoration: underline;
-}
-.blog-item-single-info {
-	padding: 5px 0 20px 0;
-	height: 15px;
-	flex:1;
-}
-.blog-item-single {
-	clear: both;
-	flex:1;
-	height: 270px;
-}
-.blog-item-single-content {
-	flex:1;
-	margin-top: 10px;
-	margin-bottom: 50px;
-}
-.blog-item-single img {
-	margin-bottom: 10px;
-}
-.blog-item-single-content h5 {
-	font-weight: bold;
-}
-.blog-item-single-content p {
-	text-align: left;
-	padding-bottom: 20px;
-}
-.social-blog-buttons {
-	display: inline;
-	float: left;
-	height: 20px;
-}
 
 /******************************************************************
 This is the buttons and inputs CSS
 ******************************************************************/
 
 .button {
-	font-family: 'Droid Serif', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	font-size:12px;
 	text-align:center;
 	text-decoration:none;
@@ -879,9 +632,10 @@ input:focus, textarea:focus {
 }
 #lang-switch button.selected,
 #lang-switch button:hover {
-	background: #fff;
+	background: #f1f1f1;
 	color: #659cb6;
 	border: none;
+	box-shadow: none;
 	cursor: pointer;
 	outline: none; 
 }
