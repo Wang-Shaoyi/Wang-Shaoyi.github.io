@@ -86,8 +86,7 @@
 	<div id="about" class="about">
 		<h4 data-lang-en="About" data-lang-cn="简介">About</h1>
 		
-		<p data-lang-en="
-			Shaoyi Wang is a Master of Science in Architecture student studying at the College of Environmental Design, UC Berkeley. Her research interest focuses on innovative structures and computational design, aiming to integrate lightweight structures, parametric design, and digital fabrication into mainstream architectural practices.She is worked as a Graduate Student Instructor (GSI) for a graduate-level course “Introduction to Structures” at UC Berkeley.
+		<p data-lang-en="Shaoyi Wang is a Master of Science in Architecture student studying at the College of Environmental Design, UC Berkeley. Her research interest focuses on innovative structures and computational design, aiming to integrate lightweight structures, parametric design, and digital fabrication into mainstream architectural practices.She is worked as a Graduate Student Instructor (GSI) for a graduate-level course “Introduction to Structures” at UC Berkeley.
 
 			Before studying at UC Berkeley, Shaoyi received her Bachelor of Architecture degree, alongside a minor in Psychology, from Tsinghua University, China, in 2023. Shaoyi's professional experience includes an internship at Song Und Partners Atelier in 2022, where she played a significant role in the facade design of the Kesi Fabric Pavilion at the Dingzhou Garden Expo Park with her parametric design skills. She also worked at China Architecture Design and Research Group as a
 			design intern in 2021." 
@@ -113,9 +112,8 @@
 		<button class="filter-btn" data-filter="Others">Others</button>
 	</div>
 	<div id="container">
-	  <ul id="stage">
 		<li data-tags="AI">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 			  <img src="images/portfolio/thumbs/image(1).png" alt="Illustration">
 			  <div class="overlay">
 				<p>Introduction</p>
@@ -125,17 +123,18 @@
 		  </li>
 		
 		<li data-tags="Architecture, Structures">
-			<a href="project-sample.html">
-				<img src="images/portfolio/thumbs/2_1.png" alt="Illustration" />
+			<a href="cable-net_vertiport.html">
+				<img src="images/portfolio/cover/cable-net_vertiport.png" alt="Illustration" />
 				<div class="overlay">
-					<p>Introduction</p>
+					<p data-lang-en="Vertiport Design Based on Form-Finding and Structural Analysis" 
+						data-lang-cn="基于结构找形与分析的垂直起降机场设计">About</p>
 				  </div>
 				</a>
-			<h5>Cable-Net Vertiport</h5>
+			<h5 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场"></h5>
 		</li>
 
 		<li data-tags="Robotics">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 			  <img src="images/portfolio/thumbs/Winding.png" alt="Illustration">
 			  <div class="overlay">
 				<p>Introduction</p>
@@ -145,7 +144,7 @@
 		</li>
 
 		<li data-tags="Architecture, Structures">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 				<img src="images/portfolio/thumbs/Weaving.png" alt="Illustration" />
 				<div class="overlay">
 					<p>Introduction</p>
@@ -155,7 +154,7 @@
 		</li>
 
 		<li data-tags="Architecture">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 				<img src="images/portfolio/thumbs/Kesi.png" alt="Illustration" />
 				<div class="overlay">
 					<p>Introduction</p>
@@ -165,7 +164,7 @@
 		</li>
   
 		<li data-tags="Architecture">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 				<img src="images/portfolio/thumbs/Sound.png" alt="Illustration" />
 				<div class="overlay">
 					<p>Introduction</p>
@@ -175,7 +174,7 @@
 		</li>
   
 		<li data-tags="Others">
-			<a href="project-sample.html">
+			<a href="cable-net_vertiport.html">
 			  <img src="images/portfolio/thumbs/3dPrtinting.png" alt="Illustration">
 			  <div class="overlay">
 				<p>Introduction</p>
@@ -183,31 +182,9 @@
 			</a>
 			<h5>Self-Glowing Lamp</h5>
 		</li>
-	  </ul>
 	</div>
 	<!--END of portfolio section-->
 	<script src="scripts/filter.js"></script>
-
-	<script>
-        // 检测当前页面URL
-        document.addEventListener("DOMContentLoaded", function() {
-            var currentUrl = window.location.href;
-            var indexSection = document.getElementById('index');
-            var aboutSection = document.getElementById('about');
-            var portfolioSection = document.getElementById('portfolio');
-            
-            if (currentUrl.includes('index.html')) {
-                // 主页
-                window.scrollTo(0, indexSection.offsetTop);
-            } else if (currentUrl.includes('about.html')) {
-                // 关于页
-                window.scrollTo(0, aboutSection.offsetTop);
-            } else if (currentUrl.includes('portfolio.html')) {
-                // 作品集页
-                window.scrollTo(0, portfolioSection.offsetTop);
-            }
-        });
-    </script>
   </div>
   <!--END of content-->
 </div>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shaoyi Wang</title>
+<link rel="shortcut icon" href="icon.ico" />
+<!-- Load CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--This is the START of the header-->
+<!-- Language switch button -->
+<div id="lang-switch">
+  <button onclick="switchLang('en')" id="lang-en">English</button>
+  <button onclick="switchLang('cn')" id="lang-cn">中文</button>
+</div>
+
+<script>
+// Function to switch language
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en]').forEach(el => {
+        if (lang === 'en') {
+            el.innerText = el.getAttribute('data-lang-en');
+        } else if (lang === 'cn') {
+            el.innerText = el.getAttribute('data-lang-cn');
+        }
+      });
+      // Update button styles
+      document.getElementById('lang-en').classList.remove('selected');
+      document.getElementById('lang-cn').classList.remove('selected');
+      document.getElementById('lang-' + lang).classList.add('selected');
+
+	  // Save the selected language to localStorage
+	  localStorage.setItem('selectedLanguage', lang);
+    }
+
+    // Initialize with English selected
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        switchLang(savedLang);
+    });
+</script>
+<!--END of header-->
+
+<!--This is the START of the menu-->
+<div id="menu-wrapper">
+	<div id="profile">
+      <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
+      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
+      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
+      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
+    </div>
+	<div id="main-menu">
+		<ul>
+			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页">Home</a></li>
+			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
+			<li><a class='selected' href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
+			<li><a href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
+		</ul>
+	</div>
+	<!--This is the START of the footer-->
+	<div id="footer">
+		<h6>© 2024 - Shaoyi Wang</h6>
+	</div>
+	<!--END of footer-->
+</div>
+<!--END of menu-->
+<!--This is the START of the content-->
+<div id="content">
+  <!--This is the START of the project-->
+  <div class="project">
+    <div id="description">
+      <!--Cover Image-->
+      <img class="project-image" src="images/portfolio/cover/cable-net_vertiport.png" alt="Cover Image" />
+      <!--Title-->
+      <h3 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场设计"></h3>
+      
+      <!--Description-->
+      <p data-lang-en="This project is a vertiport for drones located at Pier 52 east of San Fransisco, 10 miles north of San Fransisco International Airport (SFO). We designed based on the following requirements: 
+      (1) the spatial need for takeoff and landing, 
+      (2) the space for drones to stay and maintain, 
+      (3) passenger flow.
+      A steel truss with the cable net structure was developed to fit into the site conditions. "
+      data-lang-cn="此垂直起降机场位于旧金山以东52号码头，距离旧金山国际机场（SFO）约10英里。我们的设计基于以下要求：
+      （1）起降空间的需求，
+      （2）提供无人机停留和维护的空间，
+      （3）满足乘客流线。 
+      我们采用了钢桁架与索网结构，以适应场地条件。"></p>
+      <br>
+
+      <!--Start of one chapter-->
+      <h5 data-lang-en="Layout Design" data-lang-cn="布局设计"></h5>
+      <p data-lang-en="The layout design adheres to the design requirements of the vertiport and utilizes the runway to distinguish between the public side serving passengers and the private side for charging."
+      data-lang-cn="平面布局遵循了垂直起降机场的设计要求，利用跑道区分了服务乘客的公共区域和用于充电的私密区域。"></p>
+      <img class="project-image" src="images/portfolio/vertiport/context.png"/>
+      <br>
+      <!--End of one chapter-->
+
+      <!--Start of one chapter-->
+      <h5 data-lang-en="Truss Design" data-lang-cn="桁架设计"></h5>
+      <p data-lang-en="The layout design adheres to the design requirements of the vertiport and utilizes the runway to distinguish between the public side serving passengers and the private side for charging."
+      data-lang-cn="平面布局遵循了垂直起降机场的设计要求，利用跑道区分了服务乘客的公共区域和用于充电的私密区域."></p>
+      <br>
+      <!--End of one chapter-->
+
+      <!--Start of one chapter-->
+      <h5 data-lang-en="Cable-Net Design" data-lang-cn="索网结构设计"></h5>
+      <p data-lang-en="The layout design adheres to the design requirements of the vertiport and utilizes the runway to distinguish between the public side serving passengers and the private side for charging."
+      data-lang-cn="平面布局遵循了垂直起降机场的设计要求，利用跑道区分了服务乘客的公共区域和用于充电的私密区域."></p>
+      <br>
+      <!--End of one chapter-->
+
+      <!--Start of one chapter-->
+      <h5 data-lang-en="Karamba Analysis" data-lang-cn="结构分析"></h5>
+      <p data-lang-en="The layout design adheres to the design requirements of the vertiport and utilizes the runway to distinguish between the public side serving passengers and the private side for charging."
+      data-lang-cn="平面布局遵循了垂直起降机场的设计要求，利用跑道区分了服务乘客的公共区域和用于充电的私密区域."></p>
+      <br>
+      <!--End of one chapter-->
+
+      <!--Start of one chapter-->
+      <h5 data-lang-en="Model & Images" data-lang-cn="模型与渲染"></h5>
+      <p data-lang-en="A large-scale model (1:150) was made to show and test the characteristics of the structure design. Through this integrated process of physical and simulated testing, the project's feasibility was proved, ensuring a robust and effective design outcome."
+      data-lang-cn="我们制作了一个1:150的大比例模型，以展示和测试结构设计的特性。通过这种将实体模型与模拟测试相结合的过程，验证了项目的可行性，确保了设计方案的稳健性和有效性。"></p>
+      <img class="project-image" src="images/portfolio/vertiport/model1.png"/>
+      <br>
+      <!--End of one chapter-->
+
+      <!--Information-->
+      <small data-lang-en="________________________________________________________
+      Academic Work, ARCH 252 Form and Structure Project
+      Instructor: Prof. Simon Schleicher
+      Site: San Fransisco, CA, US
+      Group Work; Group Member: Fredric Lam, Yuan Xu, Moritz 
+      Contribution: Structure Design (50%), Structure Analysis (100%)
+      Tools: Rhino, Grasshopper (Kangaroo Physics, Karamba 3D) "
+      data-lang-cn="
+      课程项目，ARCH 252 Form and Structure Project
+      指导：Prof. Simon Schleicher
+      地点：美国加利福尼亚州旧金山
+      小组作业；组员：Fredric Lam, Yuan Xu, Moritz
+      个人贡献：结构设计（50%）、结构分析（100%）
+      使用工具：Rhino、Grasshopper（Kangaroo Physics、Karamba 3D）"></small>
+    </div>
+  </div>
+  <!--END of project-->
+  
+  <!--This is the START of the related-work-->
+  <div class="related-work">
+    <h4 data-lang-en="Related Works" data-lang-cn="相关作品">Other Works</h4>
+    <br>
+    <div id="container-p">
+      <ul id="stage">
+        <li data-tags="Architecture, Structures">
+          <a href="project-sample.html">
+            <img src="images/portfolio/thumbs/Weaving.png" alt="Illustration" />
+            <div class="overlay">
+              <p>Introduction</p>
+              </div>
+            </a>
+          <p>Weaving Structure</p>
+        </li>
+
+        <li data-tags="Robotics">
+          <a href="project-sample.html">
+            <img src="images/portfolio/thumbs/Winding.png" alt="Illustration">
+            <div class="overlay">
+            <p>Introduction</p>
+            </div>
+          </a>
+          <p>Fiberwinding Monohull</p>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+  <!--END of gallery-->
+</div>
+<!--END of content-->
+</body>
+</html>

@@ -71,6 +71,12 @@ General CSS
 	margin-left: 200px;
 	z-index: 1;
 }
+small {
+	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #848484;
+	font-size: 12pt;
+}
 p {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
@@ -85,11 +91,12 @@ h1 {
 	font-size: 36pt;
 }
 h2 {
-	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 30pt;
+	font-weight: bold;
 }
 h3 {
 	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
@@ -97,6 +104,7 @@ h3 {
 	color: #454544;
 	text-decoration: none;
 	font-size: 24pt;
+	font-weight: bold;
 }
 h4 {
 	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
@@ -104,13 +112,15 @@ h4 {
 	color: #454544;
 	text-decoration: none;
 	font-size: 18pt;
+	font-weight: bold;
 }
 h5 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	font-family: 'Calibri', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
 	font-size: 16pt;
+	font-weight: bold;
 }
 h6 {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
@@ -248,7 +258,7 @@ Header & Menu CSS
 #menu-wrapper {
     height: 100vh; /* 让菜单区域的高度覆盖整个视口 */
     width: 16.67%;
-    background: #ffffff; /* 设置背景颜色 */
+    background: #ffffff00; /* 设置背景颜色 */
     float: left;
     position: fixed; /* 确保菜单区域始终固定在页面左侧 */
     top: 0;
@@ -276,7 +286,6 @@ Header & Menu CSS
 #profile h2 {
     margin: 10px 30px 5px;
     font-size: 18px;
-    font-family: 'Calibri Light', Verdana, Arial, sans-serif;
     color: #333;
 }
 #profile p {
@@ -312,6 +321,7 @@ Header & Menu CSS
 #main-menu a.selected {
 	color: #659cb6;
 	font-family: 'Calibri', Verdana, Arial, sans-serif;
+	font-weight: bold;
 }
 
 #footer h6 {
@@ -394,18 +404,18 @@ Portfolio CSS
 	height: 50px;
 	line-height: 37px;
 	transition: color 0.3s;
-	padding: 10px 30px;
+	padding: 10px 4%;
 	border: none;
 	background-color: #ffffff;
 	cursor: pointer;
 	/* 防止边缘和放大效果 */
 	box-shadow: none;
 	transform: none;
+	font-weight: bold;
 }
 
 .filter-btn:hover {
 	color: #659cb6;
-	text-decoration: underline;
 	/* 防止边缘和放大效果 */
 	border: none;
 	box-shadow: none;
@@ -415,16 +425,12 @@ Portfolio CSS
 .filter-btn.active {
 	font-family: 'Calibri', Verdana, Arial, sans-serif;
 	color: #659cb6;
-	text-decoration: underline;
 	/* 防止边缘和放大效果 */
 	box-shadow: none;
 	transform: none;
 }
 
-#stage {
-	padding-left: 7%;
-	padding-right: 7%;
-}
+
 
 /*************container****************/
 #container {
@@ -435,8 +441,6 @@ Portfolio CSS
 	flex-wrap: wrap;
 	margin: 0;
 }
-
-
 
 #container li {
 	list-style: none;
@@ -459,6 +463,8 @@ Portfolio CSS
 	height: 270px; /* 增加高度 */
 	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
+	border-radius: 5px;
+	margin-bottom: 8px;
 }
 
 #container li .overlay {
@@ -474,6 +480,7 @@ Portfolio CSS
 	align-items: center;
 	opacity: 0;
 	transition: opacity 0.5s;
+	border-radius: 5px;
 }
 
 #container li:hover .overlay {
@@ -481,7 +488,8 @@ Portfolio CSS
 }
 
 #container li .overlay p {
-	margin: 0;
+	margin-left: 20px;
+	margin-right: 20px;
 	text-align: center;
 }
 
@@ -513,19 +521,26 @@ Portfolio CSS
 /******************************************************************
 This CSS is for the project page
 ******************************************************************/
-#project-title {
-	display: block;
-	font-family: 'Calibri Light',Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	color: #666;
-	text-decoration: none;
-	font-size: 18pt;
-	float: right;
-	padding-top: 10px;
-}
 .project {
-	padding-top: 50px;
 	flex:1;
+	padding-right: 10%;
+}
+.project p {
+	text-align: justify;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.project small {
+	text-align: justify;
+	font-size: 12px;
+	line-height: 1.5;
+}
+.project-image{
+	width: 80%;  /* 你可以指定图片宽度 */
+    height: auto;  /* 自动调整高度，保持比例 */
+	display: block; /* 让图片独占一行，避免与其他元素同行 */
+    padding-bottom: 10px;
+	padding-top: 10px;
 }
 #description {
 	padding-left: 60px;
@@ -533,43 +548,105 @@ This CSS is for the project page
 	float: left;
 	flex:0.6;
 }
-#work {
-	padding-left: 60px;
-	margin-top: 15px;
-	border-left: 1px;
-	border-style: solid;
-	border-color: #c9c9c9;
-	float: right;
-	padding-left: 40px;
-}
-#work h5 {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
-	padding-left: 60px;
-}
-#work li {
-	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
-	line-height: 1.6em;
-	text-decoration: none;
-	font-size: 12pt;
-	color: #666;
-	background-image: url(../images/check.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 20px;
-	padding-top: 2px;
-}
-.project-summary {
+
+.related-work {
 	clear: both;
 	flex: 0.9;
 	padding-right: 10px;
 	padding-left: 60px;
-	padding-top: 60px;
+	padding-top: 30px;
 	text-align: left;
 	margin-bottom: 20px; /* 添加底部外边距 */
 }
 
-.project-summary h5 {
+.related-work h5 {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+}
+
+/*************container-p****************/
+#container-p {
+	display: flex; 
+	justify-content: left;
+	align-items: left;
+	overflow: hidden;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+#container-p li {
+	list-style: none;
+	margin-left: 0px;
+	margin-right: 10px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: top; /* 垂直居中内容 */
+	align-items: center;     /* 水平居中内容 */
+	width: 300px;  /* 增加宽度 */
+	height: 250px; /* 增加高度 */
+	overflow: hidden; /* 确保子元素不溢出 */
+}
+
+#container-p li img {
+	width: 300px;  /* 增加宽度 */
+	height: 200px; /* 增加高度 */
+	object-fit: cover; /* 保持比例，裁剪超出部分 */
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 8px;
+}
+
+#container-p li .overlay {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 200px;
+	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.5s;
+	border-radius: 5px;
+}
+
+#container-p li:hover .overlay {
+	opacity: 1;
+}
+
+#container-p li .overlay p {
+	margin-left: 20px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+#container-p li p {
+	margin-left: 0px;
+}
+
+#container-p li h5 {
+	margin-left: 0px;
+	text-align: left;
+	font-size: 18px;
+}
+
+#container-p li a:hover {
+	color: #121212;
+}
+
+#container-p ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#container-p ul.hidden {
+	display: none;
 }
 
 /******************************************************************
@@ -588,41 +665,21 @@ This is the buttons and inputs CSS
 	padding-left: 10px;
 }
 .btncolor, .btncolor:focus, .btncolor:hover {
-	background:#FFF;
+	background:#ffffff00;
 	color:#999;
 }
-.required {
-	color: #444444;
-}
-input, textarea {
-	background: #fff;
-	border: 1px solid #c9c9c9;
-}
-input, textarea {
-	padding: 5px;
-}
-input {
-	height: 20px;
-}
-input:focus, textarea:focus, button:hover {
-	background: #fff;
-	border: 1px solid #444444;
-	-webkit-box-shadow: 0 0 2px #444444;
-	-moz-box-shadow: 0 0 2px #444444;
-	box-shadow: 0 0 2px #444444;
-}
-input:focus, textarea:focus {
-	color: #c9c9c9;
-}
-
-
 #lang-switch {
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	position: fixed;   /* 固定在页面 */
+    width: 100%;       /* 使它占据全宽 */
+    background-color: rgba(255, 255, 255, 0); /* 添加背景颜色以便区分 */
+    z-index: 1000;     /* 确保它位于其他内容的上方 */
+    text-align: right; /* 按钮居中显示 */
 }
 #lang-switch button {
-	background: #fff;
+	background: #ffffff00;
 	color: #666;
 	border: none;
 	padding: 5px 5px;
@@ -638,6 +695,7 @@ input:focus, textarea:focus {
 	box-shadow: none;
 	cursor: pointer;
 	outline: none; 
+	border-radius: 10px;
 }
 
 #pdf-container {
