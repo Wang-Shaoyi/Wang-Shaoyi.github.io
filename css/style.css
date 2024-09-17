@@ -531,16 +531,52 @@ This CSS is for the project page
 	line-height: 1.5;
 }
 .project small {
-	text-align: justify;
+	text-align: center;
 	font-size: 12px;
 	line-height: 1.5;
+	margin: 0 auto; /* 自动水平居中 */
 }
-.project-image{
-	width: 80%;  /* 你可以指定图片宽度 */
-    height: auto;  /* 自动调整高度，保持比例 */
-	display: block; /* 让图片独占一行，避免与其他元素同行 */
-    padding-bottom: 10px;
-	padding-top: 10px;
+.carousel {
+	position: relative;
+	width: 70%; /* 容器宽度 */
+	margin: 0 auto;
+	overflow: hidden; /* 超出部分隐藏 */
+}
+  
+.carousel-images {
+	display: flex;
+	transition: transform 0.8s ease;
+}
+.project-image {
+	width: 101%; /* 保持宽度 */
+	height: auto;
+	flex-shrink: 0; /* 确保图片不会收缩 */
+}
+.project-cover {
+	width: 100%; /* 每次只显示一张图片 */
+	height: auto;
+	position: relative; /* 确保图片不会影响按钮的显示 */
+  	z-index: 1;
+}
+button.prev, button.next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+	color: white;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	font-size: 18px;
+	z-index: 10; /* 添加 z-index 让按钮位于图片之上 */
+}
+  
+button.prev {
+	left: 0;
+}
+  
+button.next {
+	right: 0;
 }
 #description {
 	padding-left: 60px;

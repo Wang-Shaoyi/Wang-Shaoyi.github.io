@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shaoyi Wang</title>
+<link rel="shortcut icon" href="icon.ico" />
+<!-- Load CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="scripts/slide.js"></script>
+</head>
+<body>
+<!--This is the START of the header-->
+<!-- Language switch button -->
+<div id="lang-switch">
+  <button onclick="switchLang('en')" id="lang-en">English</button>
+  <button onclick="switchLang('cn')" id="lang-cn">中文</button>
+</div>
+
+<script>
+// Function to switch language
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang-en]').forEach(el => {
+        if (lang === 'en') {
+            el.innerText = el.getAttribute('data-lang-en');
+        } else if (lang === 'cn') {
+            el.innerText = el.getAttribute('data-lang-cn');
+        }
+      });
+      // Update button styles
+      document.getElementById('lang-en').classList.remove('selected');
+      document.getElementById('lang-cn').classList.remove('selected');
+      document.getElementById('lang-' + lang).classList.add('selected');
+
+	  // Save the selected language to localStorage
+	  localStorage.setItem('selectedLanguage', lang);
+    }
+
+    // Initialize with English selected
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        switchLang(savedLang);
+    });
+</script>
+<!--END of header-->
+
+<!--This is the START of the menu-->
+<div id="menu-wrapper">
+	<div id="profile">
+      <img src="images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
+      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
+      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
+      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
+    </div>
+	<div id="main-menu">
+		<ul>
+			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页">Home</a></li>
+			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
+			<li><a class='selected' href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
+			<li><a href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
+		</ul>
+	</div>
+	<!--This is the START of the footer-->
+	<div id="footer">
+		<h6>© 2024 - Shaoyi Wang</h6>
+	</div>
+	<!--END of footer-->
+</div>
+<!--END of menu-->
+<!--This is the START of the content-->
+<div id="content">
+  <!--This is the START of the project-->
+  <div class="project">
+    <div id="description">
+
+      
+      <!--Title-->
+      <h3 data-lang-en="Silk Tapestry Pavilion" data-lang-cn="定州园博园缂丝馆"></h3>
+
+      <!--Description-->
+      <p data-lang-en="
+      The Silk Tapestry Pavilion is part of the Dingzhou Expo Park project in Hebei province, China, resembling a ribbon fluttering in the breeze. Grasshopper was used to generate the design; all elements, including the overall shape, the facade panels, and the steel keel were controled by a few key components. This pavilion is currently under construction."
+      data-lang-cn="
+      The Silk Tapestry Pavilion is part of the Dingzhou Expo Park project in Hebei province, China, resembling a ribbon fluttering in the breeze. Grasshopper was used to generate the design; all elements, including the overall shape, the facade panels, and the steel keel were controled by a few key components. This pavilion is currently under construction."></p>
+      <br>
+      
+      <!--Start of one chapter-->
+      <div class="carousel">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        
+        <div class="carousel-images">
+          <img class="project-image" src="images/portfolio/kesi/Render.png" />
+          <img class="project-image" src="images/portfolio/kesi/gh.png" />
+          <img class="project-image" src="images/portfolio/kesi/photo1.png" />
+          <img class="project-image" src="images/portfolio/kesi/photo4.png" />
+          <img class="project-image" src="images/portfolio/kesi/Real.png" />
+        </div>
+        
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      <script src="scripts/slide.js"></script>
+ 
+      
+      <!--End of one chapter-->
+
+      <!--Information-->
+      <small data-lang-en="________________________________________________________
+      Internship Work at Song Und Partners Atelier
+      Project Location: Dingzhou, Hebei, China
+      Project Architect: Yehao Song, Xiaojuan Chen
+      Time of Participation: May-July, 2022
+      Contribution: I joined the project team when this project first started. I was responsible for the entire parametric design and modeling. "
+      data-lang-cn="
+      Internship Work at Song Und Partners Atelier
+      Project Location: Dingzhou, Hebei, China
+      Project Architect: Yehao Song, Xiaojuan Chen
+      Time of Participation: May-July, 2022
+      Contribution: I joined the project team when this project first started. I was responsible for the entire parametric design and modeling."></small>
+    </div>
+  </div>
+  <!--END of project-->
+  
+  <!--This is the START of the related-work-->
+  <div class="related-work">
+    <h4 data-lang-en="Related Works" data-lang-cn="相关作品">Other Works</h4>
+    <br>
+    <div id="container-p">
+      <ul id="stage">
+        <li data-tags="Architecture, Structures">
+          <a href="project-sample.html">
+            <img src="images/portfolio/thumbs/Weaving.png" alt="Illustration" />
+            <div class="overlay">
+              <p>Introduction</p>
+              </div>
+            </a>
+          <p>Weaving Structure</p>
+        </li>
+
+        <li data-tags="Robotics">
+          <a href="project-sample.html">
+            <img src="images/portfolio/thumbs/Winding.png" alt="Illustration">
+            <div class="overlay">
+            <p>Introduction</p>
+            </div>
+          </a>
+          <p>Fiberwinding Monohull</p>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+  <!--END of gallery-->
+</div>
+<!--END of content-->
+</body>
+</html>
