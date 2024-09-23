@@ -21,10 +21,10 @@
       document.querySelectorAll('[data-lang-en]').forEach(el => {
           if (lang === 'en') {
               el.innerText = el.getAttribute('data-lang-en');
-              document.getElementById('pdf-frame').src = 'Shaoyi_Wang_resume.pdf';
+              document.getElementById('pdf-frame').src = 'Shaoyi_Wang_resume.pdf#zoom=80';
           } else if (lang === 'cn') {
               el.innerText = el.getAttribute('data-lang-cn');
-              document.getElementById('pdf-frame').src = '王劭仪简历.pdf';
+              document.getElementById('pdf-frame').src = '王劭仪简历.pdf#zoom=80';
           }
       });
       // Update button styles
@@ -53,26 +53,13 @@
         <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
     </div>
 	<div id="main-menu">
-		<ul>
-			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页">Home</a></li>
-			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
-			<li><a href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
-			<li><a class='selected' href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
+		<ul>			
+      <li><a href="../index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页">Home</a></li>
+			<li><a href="../index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
+			<li><a href="../index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
+			<li><a class='selected' href="../resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
 		</ul>
 	</div>
-
-	<script>
-		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-			anchor.addEventListener('click', function(e) {
-				e.preventDefault();
-	
-				document.querySelector(this.getAttribute('href')).scrollIntoView({
-					behavior: 'smooth'
-				});
-			});
-		});
-
-	</script>
 	<!--This is the START of the footer-->
 	<div id="footer">
 		<h6>© 2024 - Shaoyi Wang</h6>

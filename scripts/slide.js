@@ -13,7 +13,7 @@ function showSlide(index) {
     }
   
     // 确保每次移动 100% 的宽度
-    const offset = -currentIndex * 101; 
+    const offset = -currentIndex * 100; 
     document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
 }
 

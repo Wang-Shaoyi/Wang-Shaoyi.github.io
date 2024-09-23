@@ -67,9 +67,9 @@ General CSS
 #content {
 	flex:0.9;
 	padding-right: 50px;
-	padding-top: 50px;
+	padding-top: 20px;
 	margin-left: 200px;
-	z-index: 1;
+	z-index: 0;
 }
 small {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
@@ -115,7 +115,7 @@ h4 {
 	font-weight: bold;
 }
 h5 {
-	font-family: 'Calibri', Verdana, Arial, sans-serif;
+	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
@@ -127,7 +127,8 @@ h6 {
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
-	font-size: 14pt;
+	font-size: 10pt;
+	position: relative;
 }
 /***************************************************
 COLUMNS and FEATURES
@@ -267,7 +268,7 @@ Header & Menu CSS
 
 #profile {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: fixed;
     top: 0;
 	padding-left: 30px;
@@ -278,19 +279,19 @@ Header & Menu CSS
     width: 120px;
     height: 120px;
     border-radius: 50%;
-	margin-top: 40px;
+	margin-top: 20px;
     margin-bottom: 10px;
 	margin-left: 30px;
 	float: center;
 }
 #profile h2 {
-    margin: 10px 30px 5px;
+    margin: 5px 30px 5px;
     font-size: 18px;
     color: #333;
 }
 #profile p {
     margin: 0px 30px;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Calibri Light', Verdana, Arial, sans-serif;
     color: #666;
 }
@@ -301,7 +302,7 @@ Header & Menu CSS
 }
 #main-menu {
 	position: fixed;
-	padding-top: 300px;
+	padding-top: 270px;
 	padding-left: 30px;
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	text-align: left;
@@ -309,8 +310,8 @@ Header & Menu CSS
 #main-menu a {
 	color: #707070;
 	text-decoration: none;
-	font-size: 12pt;
-	line-height: 1.5; 
+	font-size: 10pt;
+	line-height: 1.2; 
 }
 #main-menu a:hover {
 	color: #659cb6;
@@ -354,16 +355,16 @@ About us CSS
 ******************************************************************/
 
 .about {
-	padding-top: 25px;
+	padding-top: 15px;
 	flex:1;
-	padding-bottom: 20px;
+	padding-bottom: 15px;
 	padding-left: 7%;
 	padding-right: 7%;
 	line-height: 1.5;
 }
 .about p {
 	text-align: justify;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.5;
 }
 
@@ -371,7 +372,7 @@ About us CSS
 Portfolio CSS
 ******************************************************************/
 .portfolio {
-	padding-top: 25px;
+	padding-top: 15px;
 	flex:1;
 	padding-bottom: 0px;
 	padding-left: 7%;
@@ -380,7 +381,7 @@ Portfolio CSS
 .portfolio p {
 	padding-top: 0px;
 	padding-bottom: 0px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 /*************Filter****************/
@@ -398,13 +399,13 @@ Portfolio CSS
 
 .filter-btn {
 	font-family: 'Calibri', Verdana, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 	color: #666;
 	text-decoration: none;
 	height: 50px;
 	line-height: 37px;
 	transition: color 0.3s;
-	padding: 10px 4%;
+	padding: 10px 2.5%;
 	border: none;
 	background-color: #ffffff;
 	cursor: pointer;
@@ -453,14 +454,14 @@ Portfolio CSS
 	flex-direction: column;
 	justify-content: top; /* 垂直居中内容 */
 	align-items: center;     /* 水平居中内容 */
-	width: 420px;  /* 增加宽度 */
-	height: 320px; /* 增加高度 */
+	width: 320px;  /* 增加宽度 */
+	height: 250px; /* 增加高度 */
 	overflow: hidden; /* 确保子元素不溢出 */
 }
 
 #container li img {
-	width: 420px;  /* 增加宽度 */
-	height: 270px; /* 增加高度 */
+	width: 320px;  /* 增加宽度 */
+	height: 210px; /* 增加高度 */
 	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
 	border-radius: 5px;
@@ -472,7 +473,7 @@ Portfolio CSS
 	top: 0;
 	left: 0px;
 	width: 100%;
-	height: 270px;
+	height: 210px;
 	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
 	color: white;
 	display: flex;
@@ -495,12 +496,13 @@ Portfolio CSS
 
 #container li p {
 	margin-left: 0px;
+	font-size: 14px;
 }
 
 #container li h5 {
 	margin-left: 0px;
 	text-align: left;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 #container li a:hover {
@@ -523,22 +525,28 @@ This CSS is for the project page
 ******************************************************************/
 .project {
 	flex:1;
-	padding-right: 10%;
+	padding-top: 0px;
+	padding-right: 0px;
 }
 .project p {
 	text-align: justify;
-	font-size: 16px;
-	line-height: 1.5;
+	font-size: 14px;
+	line-height: 1.25;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.project h3 {
+	font-size: 24px;
 }
 .project small {
 	text-align: center;
-	font-size: 12px;
+	font-size: 10px;
 	line-height: 1.5;
 	margin: 0 auto; /* 自动水平居中 */
 }
 .carousel {
 	position: relative;
-	width: 70%; /* 容器宽度 */
+	width: 80%; /* 容器宽度 */
 	margin: 0 auto;
 	overflow: hidden; /* 超出部分隐藏 */
 }
@@ -548,16 +556,11 @@ This CSS is for the project page
 	transition: transform 0.8s ease;
 }
 .project-image {
-	width: 101%; /* 保持宽度 */
+	width: 100%; /* 保持宽度 */
 	height: auto;
 	flex-shrink: 0; /* 确保图片不会收缩 */
 }
-.project-cover {
-	width: 100%; /* 每次只显示一张图片 */
-	height: auto;
-	position: relative; /* 确保图片不会影响按钮的显示 */
-  	z-index: 1;
-}
+
 button.prev, button.next {
 	position: absolute;
 	top: 50%;
@@ -581,8 +584,10 @@ button.next {
 #description {
 	padding-left: 60px;
 	padding-right: 60px;
+	padding-top: 0px;
 	float: left;
-	flex:0.6;
+	position: relative;
+    z-index: 0; /* 确保 z-index 为正常值，不影响点击 */
 }
 
 .related-work {
@@ -595,8 +600,36 @@ button.next {
 	margin-bottom: 20px; /* 添加底部外边距 */
 }
 
-.related-work h5 {
+#description h6 {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
+	line-height: 1.6em;
+	color: #454544;
+	text-decoration: none;
+	font-size: 10pt;
+	position: relative;
+	z-index: 1000;     /* 保证元素不被其他内容遮挡 */
+}
+
+#description h6 a {
+	color: #666; /* 继承父元素的颜色，保持与 h6 一致 */
+	text-decoration: none; /* 去掉下划线 */
+	z-index: 1000;     /* 保证元素不被其他内容遮挡 */
+	pointer-events: auto; /* 确保链接可以点击 */
+}
+  
+#description h6 a:visited {
+	color: #666; /* 保持已访问过的链接颜色一致 */
+	text-decoration: none; /* 已访问过的链接无下划线 */
+}
+  
+#description h6 a:hover {
+	text-decoration: none; /* 悬停时显示下划线，可根据需要保留或去掉 */
+	color: #659cb6
+}
+  
+#description h6 a:active {
+	color: #666; /* 点击时保持颜色不变 */
+	text-decoration: none; /* 点击时无下划线 */
 }
 
 /*************container-p****************/
@@ -705,13 +738,11 @@ This is the buttons and inputs CSS
 	color:#999;
 }
 #lang-switch {
-	position: absolute;
 	top: 20px;
 	right: 20px;
 	position: fixed;   /* 固定在页面 */
-    width: 100%;       /* 使它占据全宽 */
-    background-color: rgba(255, 255, 255, 0); /* 添加背景颜色以便区分 */
-    z-index: 1000;     /* 确保它位于其他内容的上方 */
+    width:50%;       /* 使它占据全宽 */
+    z-index: 1;     /* 确保它位于其他内容的上方 */
     text-align: right; /* 按钮居中显示 */
 }
 #lang-switch button {
@@ -737,11 +768,10 @@ This is the buttons and inputs CSS
 #pdf-container {
 	flex: 1;
 	overflow: auto;
-	margin-left: 80px;
-	margin-right: 80px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 iframe {
 	width: 100%;
 	height: 1200px;
-	border: none;
 }

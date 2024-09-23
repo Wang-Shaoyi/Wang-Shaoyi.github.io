@@ -10,41 +10,17 @@
 <!-- my javascript -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="scripts/filter.js"></script>
-<script src="scripts/smoothSliding.js"></script>
+<script src="scripts/smooth_change.js"></script>
+<script src="../scripts/switch_language.js"></script>
 </head>
 <body>
 
 <!-- Language switch button -->
 <div id="lang-switch">
-  <button onclick="switchLang('en')" id="lang-en">English</button>
-  <button onclick="switchLang('cn')" id="lang-cn">中文</button>
+  <button onclick="switchLang('en')" id="lang-en">EN</button>
+  <button onclick="switchLang('cn')" id="lang-cn">中</button>
 </div>
-
-<script>
-// Function to switch language
-    function switchLang(lang) {
-      document.querySelectorAll('[data-lang-en]').forEach(el => {
-        if (lang === 'en') {
-            el.innerText = el.getAttribute('data-lang-en');
-        } else if (lang === 'cn') {
-            el.innerText = el.getAttribute('data-lang-cn');
-        }
-      });
-      // Update button styles
-      document.getElementById('lang-en').classList.remove('selected');
-      document.getElementById('lang-cn').classList.remove('selected');
-      document.getElementById('lang-' + lang).classList.add('selected');
-
-	  // Save the selected language to localStorage
-	  localStorage.setItem('selectedLanguage', lang);
-    }
-
-    // Initialize with English selected
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
-        switchLang(savedLang);
-    });
-</script>
+<script src="../scripts/switch_language.js"></script>
 
 <!--This is the START of the menu-->
 <div id="menu-wrapper">
@@ -56,14 +32,14 @@
     </div>
 	<div id="main-menu">
 		<ul>
-			<li><a href="index.html#index" data-lang-en="Home" data-lang-cn="首页" class="selected">Home</a></li>
-			<li><a href="index.html#about" data-lang-en="About" data-lang-cn="简介">About</a></li>
-			<li><a href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作品">Portfolio</a></li>
-			<li><a href="resume.html" data-lang-en="Resume" data-lang-cn="简历">Resume</a></li>
+			<li><a href="index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页" class="selected">Home</a></li>
+			<li><a href="index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
+			<li><a href="index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
+			<li><a href="resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
 		</ul>
 	</div>
 
-	<script src="scripts/smoothSliding.js"></script>
+	<script src="scripts/smooth_change.js"></script>
 
 	<!--This is the START of the footer-->
 	<div id="footer">
@@ -77,8 +53,7 @@
 <div id="content">
 	<div id="welcome" class="welcome">
 		<p>
-			I'm an architect with a passion for innovative design. 
-			Enjoy exploring my work!
+			Architect & Researcher & Innovative Designer
 		</p>
 	</div>
 
@@ -88,8 +63,7 @@
 		
 		<p data-lang-en="Shaoyi Wang is a Master of Science in Architecture student studying at the College of Environmental Design, UC Berkeley. Her research interest focuses on innovative structures and computational design, aiming to integrate lightweight structures, parametric design, and digital fabrication into mainstream architectural practices.She is worked as a Graduate Student Instructor (GSI) for a graduate-level course “Introduction to Structures” at UC Berkeley.
 
-			Before studying at UC Berkeley, Shaoyi received her Bachelor of Architecture degree, alongside a minor in Psychology, from Tsinghua University, China, in 2023. Shaoyi's professional experience includes an internship at Song Und Partners Atelier in 2022, where she played a significant role in the facade design of the Kesi Fabric Pavilion at the Dingzhou Garden Expo Park with her parametric design skills. She also worked at China Architecture Design and Research Group as a
-			design intern in 2021." 
+			Before studying at UC Berkeley, Shaoyi received her Bachelor of Architecture degree, alongside a minor in Psychology, from Tsinghua University, China, in 2023." 
 			
 			data-lang-cn="
 			王劭仪是加州大学伯克利分校环境设计学院的建筑学硕士研究生。她的研究兴趣集中在创新结构与计算设计领域，致力于将轻型结构、参数化设计和数字化建造整合到主流建筑实践中。她曾担任加州大学伯克利分校研究生课程“结构入门”的研究生助教（GSI）。
@@ -104,27 +78,19 @@
 	</div>
 	<!--This is the START of the portfolio section-->
 	<div id="filter">
-		<button class="filter-btn" data-filter="all">All</button>
-		<button class="filter-btn" data-filter="AI">AI</button>
-		<button class="filter-btn" data-filter="Architecture">Architecture</button>
-		<button class="filter-btn" data-filter="Structures">Structures</button>
-		<button class="filter-btn" data-filter="Robotics">Robotics</button>
-		<button class="filter-btn" data-filter="Others">Others</button>
+		<button class="filter-btn" data-filter="all">🎨 All</button>
+		<button class="filter-btn" data-filter="Architecture">🏘️ Architecture</button>
+		<button class="filter-btn" data-filter="Structures">🔨 Structures</button>
+		<button class="filter-btn" data-filter="Robotics">🦾 Robotics</button>
+		<button class="filter-btn" data-filter="AI">✨️ AI</button>
+		<button class="filter-btn" data-filter="Others">😸 Others</button>
 	</div>
 	<div id="stage">
 	<div id="container">
-		<li data-tags="AI">
-			<a href="cable-net_vertiport.html">
-			  <img src="images/portfolio/thumbs/image(1).png" alt="Illustration">
-			  <div class="overlay">
-				<p>Introduction</p>
-			  </div>
-			</a>
-			<h5>InnoRender</h5>
-		  </li>
-		
+
+		<!--vertiport-->
 		<li data-tags="Architecture, Structures">
-			<a href="cable-net_vertiport.html">
+			<a href="projects/cable-net_vertiport.html">
 				<img src="images/portfolio/cover/cable-net_vertiport.png" alt="Illustration" />
 				<div class="overlay">
 					<p data-lang-en="Vertiport Design Based on Form-Finding and Structural Analysis" 
@@ -134,60 +100,90 @@
 			<h5 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场"></h5>
 		</li>
 
+		<!--Monohull-->
 		<li data-tags="Robotics">
-			<a href="cable-net_vertiport.html">
-			  <img src="images/portfolio/thumbs/Winding.png" alt="Illustration">
+			<a href="projects/monohull.html">
+			  <img src="images/portfolio/cover/Winding.png" alt="Illustration">
 			  <div class="overlay">
-				<p>Introduction</p>
+				<p data-lang-en="Robotic Fabrication on Fiber-Winding" 
+						data-lang-cn="机械臂建造">About</p>
 			  </div>
 			</a>
-			<h5>Fiberwinding Monohull</h5>
+			<h5 data-lang-en="Fiber-Winding Monohull" data-lang-cn="纤维缠绕单体船"></h5>
 		</li>
 
+		<!--Inno Render-->
+		<li data-tags="AI">
+			<a href="projects/innorender.html">
+			  <img src="images/portfolio/cover/Inno.png" alt="Illustration">
+			  <div class="overlay">
+				<p data-lang-en="Simple & Fast AI-Rendering Plugin for Rhino" 
+						data-lang-cn="简洁快速的 Rhino AI 渲染插件">About</p>
+			  </div>
+			</a>
+			<h5 data-lang-en="Inno-Render" data-lang-cn="Inno-Render"></h5>
+		</li>
+
+		<!--Kesi-->
 		<li data-tags="Architecture">
-			<a href="kesi_pavilion.html">
-				<img src="images/portfolio/thumbs/Kesi.png" alt="Illustration" />
+			<a href="projects/kesi_pavilion.html">
+				<img src="images/portfolio/cover/Kesi.png" alt="Illustration" />
 				<div class="overlay">
 					<p data-lang-en="Parametric design pavilion (Intern work)" 
 						data-lang-cn="参数化设计（实习作品）">About</p>
 				  </div>
 				</a>
 			<h5 data-lang-en="Silk Tapestry Pavilion" data-lang-cn="定州园博园缂丝馆"></h5>
-
 		</li>
 
+		<!--Weaving Structure-->
 		<li data-tags="Architecture, Structures">
-			<a href="cable-net_vertiport.html">
-				<img src="images/portfolio/thumbs/Weaving.png" alt="Illustration" />
+			<a href="projects/weaving_structure.html">
+				<img src="images/portfolio/cover/Weaving.png" alt="Illustration" />
 				<div class="overlay">
-					<p data-lang-en="Parametric design pavilion (Intern work)" 
-						data-lang-cn="参数化设计（实习作品）">About</p>
+					<p data-lang-en="Large-Scale Bending-Active Structure Design" 
+						data-lang-cn="大跨度弹性自找形结构设计">About</p>
 				  </div>
 				</a>
-			<h5>Weaving Structure</h5>
+			<h5 data-lang-en="Weaving Structure" data-lang-cn="编织结构建筑设计"></h5>
 		</li>
-  
+		
+		<!--White Noise-->
 		<li data-tags="Architecture">
-			<a href="cable-net_vertiport.html">
-				<img src="images/portfolio/thumbs/Sound.png" alt="Illustration" />
+			<a href="projects/white_noise.html">
+				<img src="images/portfolio/cover/Sound.png" alt="Illustration" />
 				<div class="overlay">
-					<p>Introduction</p>
+					<p data-lang-en="Relieve Lonliness during the COVID-19 Period" 
+						data-lang-cn="应对新冠时期居家的孤独感">About</p>
 				  </div>
 				</a>
-			<h5>White Noise Apartment</h5>
+			<h5 data-lang-en="White-Noise Apartment" data-lang-cn="白噪音公寓"></h5>
 		</li>
 
-		
-  
+		<!--lamp-->
 		<li data-tags="Others">
-			<a href="cable-net_vertiport.html">
-			  <img src="images/portfolio/thumbs/3dPrtinting.png" alt="Illustration">
+			<a href="projects/lamp.html">
+			  <img src="images/portfolio/cover/3dPrtinting.png" alt="Illustration">
 			  <div class="overlay">
-				<p>Introduction</p>
+				<p data-lang-en="Towards Sustainable Bioluminescence: Parametric Design and 3D Printing" 
+						data-lang-cn="迈向可持续生物发光：参数化设计与3D打印">About</p>
 			  </div>
 			</a>
-			<h5>Self-Glowing Lamp</h5>
+			<h5 data-lang-en="Self-Glowing Lamp" data-lang-cn="自发光装饰灯"></h5>
 		</li>
+
+		<!--Lapping Structure-->
+		<li data-tags="Architecture, Structures">
+			<a href="projects/white_noise.html">
+				<img src="images/portfolio/cover/lapping.png" alt="Illustration" />
+				<div class="overlay">
+					<p data-lang-en="Proposing a Novel 3-Dimensional Rod-Composed Structural System" 
+						data-lang-cn="新型三维杆构结构系统">About</p>
+				  </div>
+				</a>
+			<h5 data-lang-en="Lapping Structure" data-lang-cn="Lapping Structure"></h5>
+		</li>
+
 	</div>
 	</div>
 	<!--END of portfolio section-->
