@@ -9,6 +9,11 @@
 /******************************************************************
 This is the CSS Reset
 ******************************************************************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -279,19 +284,19 @@ Header & Menu CSS
     width: 120px;
     height: 120px;
     border-radius: 50%;
-	margin-top: 20px;
+	margin-top: 30px;
     margin-bottom: 10px;
 	margin-left: 30px;
 	float: center;
 }
 #profile h2 {
     margin: 5px 30px 5px;
-    font-size: 18px;
+    font-size: 24px;
     color: #333;
 }
 #profile p {
     margin: 0px 30px;
-    font-size: 12px;
+    font-size: 16px;
     font-family: 'Calibri Light', Verdana, Arial, sans-serif;
     color: #666;
 }
@@ -302,7 +307,7 @@ Header & Menu CSS
 }
 #main-menu {
 	position: fixed;
-	padding-top: 270px;
+	padding-top: 310px;
 	padding-left: 30px;
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	text-align: left;
@@ -310,8 +315,8 @@ Header & Menu CSS
 #main-menu a {
 	color: #707070;
 	text-decoration: none;
-	font-size: 10pt;
-	line-height: 1.2; 
+	font-size: 13pt;
+	line-height: 1.5; 
 }
 #main-menu a:hover {
 	color: #659cb6;
@@ -344,7 +349,7 @@ Welcome CSS
 
 .welcome p {
     text-align: justify;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     color: #659cb6;
     font-style: italic; /* 将文本设置为斜体 */
@@ -364,7 +369,8 @@ About us CSS
 }
 .about p {
 	text-align: justify;
-	font-size: 14px;
+	padding-top: 10px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
@@ -379,9 +385,9 @@ Portfolio CSS
 	padding-right: 7%;
 }
 .portfolio p {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 18px;
 }
 
 /*************Filter****************/
@@ -399,7 +405,7 @@ Portfolio CSS
 
 .filter-btn {
 	font-family: 'Calibri', Verdana, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 20px;
 	color: #666;
 	text-decoration: none;
 	height: 50px;
@@ -441,27 +447,29 @@ Portfolio CSS
 	overflow: hidden;
 	flex-wrap: wrap;
 	margin: 0;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 #container li {
 	list-style: none;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
 	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: top; /* 垂直居中内容 */
 	align-items: center;     /* 水平居中内容 */
-	width: 320px;  /* 增加宽度 */
-	height: 250px; /* 增加高度 */
+	width: 420px;  /* 增加宽度 */
+	height: 320px; /* 增加高度 */
 	overflow: hidden; /* 确保子元素不溢出 */
 }
 
 #container li img {
-	width: 320px;  /* 增加宽度 */
-	height: 210px; /* 增加高度 */
+	width: 420px;  /* 增加宽度 */
+	height: 280px; /* 增加高度 */
 	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
 	border-radius: 5px;
@@ -473,7 +481,7 @@ Portfolio CSS
 	top: 0;
 	left: 0px;
 	width: 100%;
-	height: 210px;
+	height: 280px;
 	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
 	color: white;
 	display: flex;
@@ -496,13 +504,13 @@ Portfolio CSS
 
 #container li p {
 	margin-left: 0px;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 #container li h5 {
 	margin-left: 0px;
 	text-align: left;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 #container li a:hover {
@@ -526,27 +534,29 @@ This CSS is for the project page
 .project {
 	flex:1;
 	padding-top: 0px;
-	padding-right: 0px;
+	padding-right: 5%;
+	padding-left: 8%;
 }
 .project p {
 	text-align: justify;
-	font-size: 14px;
-	line-height: 1.25;
+	font-size: 17px;
+	line-height: 1.5;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 .project h3 {
-	font-size: 24px;
+	padding-top: 10px;
+	font-size: 28px;
 }
 .project small {
 	text-align: center;
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 1.5;
 	margin: 0 auto; /* 自动水平居中 */
 }
 .carousel {
 	position: relative;
-	width: 80%; /* 容器宽度 */
+	width: 75%; /* 容器宽度 */
 	margin: 0 auto;
 	overflow: hidden; /* 超出部分隐藏 */
 }
@@ -582,8 +592,7 @@ button.next {
 	right: 0;
 }
 #description {
-	padding-left: 60px;
-	padding-right: 60px;
+
 	padding-top: 0px;
 	float: left;
 	position: relative;
@@ -593,11 +602,10 @@ button.next {
 .related-work {
 	clear: both;
 	flex: 0.9;
-	padding-right: 10px;
-	padding-left: 60px;
 	padding-top: 30px;
 	text-align: left;
 	margin-bottom: 20px; /* 添加底部外边距 */
+	padding-left: 8%;
 }
 
 #description h6 {
@@ -605,7 +613,7 @@ button.next {
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
-	font-size: 10pt;
+	font-size: 14pt;
 	position: relative;
 	z-index: 1000;     /* 保证元素不被其他内容遮挡 */
 }
@@ -640,6 +648,7 @@ button.next {
 	overflow: hidden;
 	flex-wrap: wrap;
 	margin: 0;
+
 }
 
 #container-p li {
@@ -700,8 +709,9 @@ button.next {
 #container-p li h5 {
 	margin-left: 0px;
 	text-align: left;
-	font-size: 18px;
+	font-size: 16px;
 }
+
 
 #container-p li a:hover {
 	color: #121212;
