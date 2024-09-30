@@ -9,9 +9,6 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <!-- my javascript -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="scripts/filter.js"></script>
-<script src="scripts/smooth_change.js"></script>
-<script src="../scripts/switch_language.js"></script>
 </head>
 <body>
 
@@ -32,10 +29,10 @@
     </div>
 	<div id="main-menu">
 		<ul>
-			<li><a href="index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页" class="selected">Home</a></li>
-			<li><a href="index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
-			<li><a href="index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
-			<li><a href="resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
+			<li><img src="images/icons/home.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> <a href="index.html#index" data-lang-en="Home" data-lang-cn="首    页" class="selected">Home</a></li>
+			<li><img src="images/icons/hello.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> <a href="index.html#about" data-lang-en="About" data-lang-cn="简  介">About</a></li>
+			<li><img src="images/icons/portfolio.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"><a href="index.html#portfolio" data-lang-en="Portfolio" data-lang-cn="作  品">Portfolio</a></li>
+			<li><img src="images/icons/resume.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"><a href="resume.html" data-lang-en="Resume" data-lang-cn="简  历">Resume</a></li>
 		</ul>
 	</div>
 
@@ -61,28 +58,45 @@
 	<div id="about" class="about">
 		<h4 data-lang-en="About" data-lang-cn="简介">About</h1>
 		
-		<p data-lang-en="Shaoyi Wang is a Master of Science in Architecture student studying at the College of Environmental Design, UC Berkeley. Her research interest focuses on innovative structures and computational design, aiming to integrate lightweight structures, parametric design, and digital fabrication into mainstream architectural practices.She is worked as a Graduate Student Instructor (GSI) for a graduate-level course “Introduction to Structures” at UC Berkeley.
+		<p data-lang-en="
+		Shaoyi Wang is a Master of Science in Architecture student studying at the College of Environmental Design, UC Berkeley. Her research interest focuses on innovative structures and computational design, aiming to integrate lightweight structures, parametric design, and digital fabrication into mainstream architectural practices.She is worked as a Graduate Student Instructor (GSI) for a graduate-level course “Introduction to Structures” at UC Berkeley.
 
-			Before studying at UC Berkeley, Shaoyi received her Bachelor of Architecture degree, alongside a minor in Psychology, from Tsinghua University, China, in 2023." 
+		Before studying at UC Berkeley, Shaoyi received her Bachelor of Architecture degree, alongside a minor in Psychology, from Tsinghua University, China, in 2023." 
 			
-			data-lang-cn="王劭仪是加州大学伯克利分校环境设计学院的建筑学硕士研究生。她的研究兴趣集中在创新结构与计算设计领域，致力于将轻型结构、参数化设计和数字化建造整合到主流建筑实践中。她曾担任加州大学伯克利分校研究生课程“结构入门”的研究生助教（GSI）。
+		data-lang-cn="
+		王劭仪是加州大学伯克利分校环境设计学院的建筑学硕士研究生。她的研究兴趣集中在创新结构与计算设计领域，致力于将轻型结构、参数化设计和数字化建造整合到主流建筑实践中。她曾担任加州大学伯克利分校研究生课程“结构入门”的研究生助教（GSI）。
 
-			在加州大学伯克利分校学习之前，王劭仪于2023年在中国清华大学获得了建筑学学士学位，并辅修了心理学。王劭仪的职业经历包括在2022年于宋和伙伴设计事务所实习期间，利用参数化设计技能在定州园博园柯丝织物馆的幕墙设计中发挥了重要作用。她还曾于2021年在中国建筑设计研究院担任设计实习生。"></p>
+		在加州大学伯克利分校学习之前，王劭仪于2023年在中国清华大学获得了建筑学学士学位，并辅修了心理学。王劭仪的职业经历包括在2022年于宋和伙伴设计事务所实习期间，利用参数化设计技能在定州园博园柯丝织物馆的幕墙设计中发挥了重要作用。她还曾于2021年在中国建筑设计研究院担任设计实习生。"></p>
 	</div>
 	
 	<div id="portfolio" class="portfolio">
 		<h4 data-lang-en="Portfolio" data-lang-cn="作品">About</h4>
-		<p data-lang-en="lightweight structures, parametric design, and digital fabrication" 
-		data-lang-cn="参数化、结构与数字建造">About</p>
+		<p data-lang-en="
+		lightweight structures, parametric design, and digital fabrication" 
+		data-lang-cn="
+		参数化、结构与数字建造">About</p>
 	</div>
 	<!--This is the START of the portfolio section-->
 	<div id="filter">
-		<button class="filter-btn" data-filter="all">🎨 All</button>
-		<button class="filter-btn" data-filter="Architecture">🏘️ Architecture</button>
-		<button class="filter-btn" data-filter="Structures">🔨 Structures</button>
-		<button class="filter-btn" data-filter="Robotics">🦾 Robotics</button>
-		<button class="filter-btn" data-filter="AI">✨️ AI</button>
-		<button class="filter-btn" data-filter="Others">😸 Others</button>
+		<button class="filter-btn" data-filter="all">
+			<img src="images/icons/all.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> All
+		</button>
+		<button class="filter-btn" data-filter="Architecture">
+			<img src="images/icons/architecture.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> Architecture
+		</button>
+		<button class="filter-btn" data-filter="Structures">
+			<img src="images/icons/beam.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> Structures
+		</button>
+		<button class="filter-btn" data-filter="Plugins">
+			<img src="images/icons/plugin.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> Plugins
+		</button>
+		<button class="filter-btn" data-filter="Robotics">
+			<img src="images/icons/robotic.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> Robotics
+		</button>
+		<button class="filter-btn" data-filter="AI">
+			<img src="images/icons/ai.png" alt="All" style="width: 25px; height: 25px; vertical-align: middle;"> AI
+		</button>
+		
 	</div>
 	<div id="stage">
 	<div id="container">
@@ -110,18 +124,31 @@
 			</a>
 			<h5 data-lang-en="Fiber-Winding Monohull" data-lang-cn="纤维缠绕单体船"></h5>
 		</li>
+		
+		<!--Pseudorandom-->
+		<li data-tags="AI,Plugins">
+			<a href="projects/pseudorandom.html">
+			  <img src="images/portfolio/cover/pseudorandom.png" alt="Illustration">
+			  <div class="overlay">
+				<p data-lang-en="Advanced AI Rendering Tool (Inter work)" 
+						data-lang-cn="实现精细控制的 AI 渲染插件 (实习项目)">About</p>
+			  </div>
+			</a>
+			<h5 data-lang-en="Pseudorandom" data-lang-cn="Pseudorandom"></h5>
+		</li>
 
 		<!--Inno Render-->
-		<li data-tags="AI">
+		<li data-tags="AI,Plugins">
 			<a href="projects/innorender.html">
 			  <img src="images/portfolio/cover/Inno.png" alt="Illustration">
 			  <div class="overlay">
 				<p data-lang-en="Simple & Fast AI-Rendering Plugin for Rhino" 
-						data-lang-cn="简洁快速的 Rhino AI 渲染插件">About</p>
+						data-lang-cn="简单快速的 Rhino AI 渲染插件">About</p>
 			  </div>
 			</a>
 			<h5 data-lang-en="Inno-Render" data-lang-cn="Inno-Render"></h5>
 		</li>
+
 
 		<!--Kesi-->
 		<li data-tags="Architecture">
