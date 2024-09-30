@@ -504,7 +504,7 @@ This CSS is for the project page
 }
 .carousel {
 	position: relative;
-	width: 75%; /* 容器宽度 */
+	width: 100%; /* 容器宽度 */
 	margin: 0 auto;
 	overflow: hidden; /* 超出部分隐藏 */
 }
