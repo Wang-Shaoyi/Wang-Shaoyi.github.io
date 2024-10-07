@@ -73,7 +73,7 @@ General CSS
 									
 #content {
 	flex:0.9;
-	padding-right: 50px;
+	padding-right: 70px;
 	padding-top: 20px;
 	margin-left: 200px;
 	z-index: 0;
@@ -88,8 +88,9 @@ p {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
 	line-height: 1.6em;
 	color: #848484;
-	font-size: 12pt;
+	font-size: 13pt;
 	line-height: 1.5;
+	text-align: justify;
 }
 h1 {
 	font-family: 'Calibri Bold', Verdana, Arial, sans-serif;
@@ -135,7 +136,7 @@ h6 {
 	line-height: 1.6em;
 	color: #454544;
 	text-decoration: none;
-	font-size: 10pt;
+	font-size: 11pt;
 	position: relative;
 }
 /***************************************************
@@ -273,15 +274,17 @@ Header & Menu CSS
 #main-menu a {
 	color: #707070;
 	text-decoration: none;
-	font-size: 12pt;
+	font-size: 13pt;
 	padding-left: 10px;
 	line-height: 1.5; 
+	text-align: left;
 }
 #main-menu a:hover {
 	color: #659cb6;
 }
 #main-menu li {
 	padding: 5px 0 5px 0;
+	display: flex;
 }
 #main-menu a.selected {
 	color: #659cb6;
@@ -483,7 +486,7 @@ This CSS is for the project page
 .project {
 	flex:1;
 	padding-top: 0px;
-	padding-right: 5%;
+	padding-right: 20%;
 	padding-left: 8%;
 }
 .project p {
@@ -611,14 +614,14 @@ button.next {
 	flex-direction: column;
 	justify-content: top; /* 垂直居中内容 */
 	align-items: center;     /* 水平居中内容 */
-	width: 300px;  /* 增加宽度 */
-	height: 250px; /* 增加高度 */
+	width: 250px;  /* 增加宽度 */
+	height: 200px; /* 增加高度 */
 	overflow: hidden; /* 确保子元素不溢出 */
 }
 
 #container-p li img {
-	width: 300px;  /* 增加宽度 */
-	height: 200px; /* 增加高度 */
+	width: 250px;  /* 增加宽度 */
+	height: 160px; /* 增加高度 */
 	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
 	border-radius: 5px;
@@ -630,7 +633,7 @@ button.next {
 	top: 0;
 	left: 0px;
 	width: 100%;
-	height: 200px;
+	height: 160px;
 	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
 	color: white;
 	display: flex;
