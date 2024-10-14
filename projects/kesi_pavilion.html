@@ -19,31 +19,11 @@
 <script src="../scripts/switch_language.js"></script>
 <!--END of header-->
 
-<!--This is the START of the menu-->
-<div id="menu-wrapper">
-	<div id="profile">
-      <img src="../images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
-      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
-      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
-    </div>
-	<div id="main-menu">
-		<ul>
-			<li><a href="../index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页">Home</a></li>
-			<li><a href="../index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
-			<li><a class='selected' href="../index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
-			<li><a href="../resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
-		</ul>
-	</div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<h6>© 2024 - Shaoyi Wang</h6>
-	</div>
-	<!--END of footer-->
-</div>
-<!--END of menu-->
-<!--This is the START of the content-->
+<div class="layout">
+  <div id="menu-placeholder"></div>
+  <script src="../scripts/project_menu.js"></script>
 
+<!--This is the START of the content-->
 
 <div id="content">
   <!--This is the START of the project-->
@@ -104,17 +84,7 @@
     <br>
     <div id="container-p">
       <ul id="stage">
-        <!--vertiport-->
-        <li data-tags="Architecture, Structures">
-          <a href="cable-net_vertiport.html">
-            <img src="../images/portfolio/cover/cable-net_vertiport.png" alt="Illustration" />
-            <div class="overlay">
-              <p data-lang-en="Vertiport Design Based on Form-Finding and Structural Analysis" 
-                data-lang-cn="基于结构找形与分析的垂直起降机场设计">About</p>
-              </div>
-            </a>
-          <h5 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场"></h5>
-        </li>
+        
 
         <!--White Noise-->
         <li data-tags="Architecture">
@@ -126,6 +96,18 @@
               </div>
             </a>
           <h5 data-lang-en="White-Noise Apartment" data-lang-cn="白噪音公寓"></h5>
+        </li>
+
+        <!--Bamboo-->
+        <li data-tags="Architecture">
+          <a href="bamboo.html">
+            <img src="../images/portfolio/cover/bamboo.png" alt="Illustration" />
+            <div class="overlay">
+              <p data-lang-en="THE 1st BFU INTERNATIONAL GARDEN-MAKING FESTIVAL" 
+                data-lang-cn="2018首届北林国际花园建造节">About</p>
+            </div>
+            </a>
+          <h5 data-lang-en="Bamboo Garden: After Review" data-lang-cn="竹境 花园"></h5>
         </li>
 
         <!--lamp-->
@@ -146,5 +128,6 @@
   <!--END of gallery-->
 </div>
 <!--END of content-->
+</div>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaoyi Wang</title>
 <link rel="shortcut icon" href="../icon.ico" />
 <!-- Load CSS -->
@@ -15,117 +16,120 @@
   <button onclick="switchLang('cn')" id="lang-cn">中</button>
 </div>
 <script src="../scripts/switch_language.js"></script>
-<!--END of header-->
 
+
+<!--END of header-->
+<div class="layout">
 <div id="menu-placeholder"></div>
 <script src="../scripts/project_menu.js"></script>
 
 
 
-<!--This is the START of the content-->
-<div id="content">
-  <!--This is the START of the project-->
-  <div class="project">
-    <div id="description">
-      <!--Title-->
-      <h6>
-          <a href="../index.html#portfolio" data-lang-en="👈️ Back to Portfolio" data-lang-cn="👈️ 返回作品"></a>
-      </h6>
-      <h3 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场设计"></h3>
-      
-      <!--Description-->
-      <p data-lang-en="This project is a vertiport for drones located at Pier 52 east of San Fransisco, 10 miles north of San Fransisco International Airport (SFO). A steel truss with the cable net structure was developed to fit into the site conditions. We applied form-finding methods on both the truss and the cable-net, and optimized the structure based on structural analysis methods."
-      data-lang-cn="该项目是位于旧金山东部52号码头的无人机垂直起降港，距离旧金山国际机场（SFO）以北10英里。项目开发了适应场地条件的钢桁架与索网结构。我们对桁架和索网应用了形态寻找方法，并基于结构分析方法优化了该结构。"></p>
-      <br>
-
-      <!--Start of one chapter-->
-      <div class="carousel">
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
+  <!--This is the START of the content-->
+  <div id="content">
+    <!--This is the START of the project-->
+    <div class="project">
+      <div id="description">
+        <!--Title-->
+        <h6>
+            <a href="../index.html#portfolio" data-lang-en="👈️ Back to Portfolio" data-lang-cn="👈️ 返回作品"></a>
+        </h6>
+        <h3 data-lang-en="Cable-net Vertiport" data-lang-cn="索网结构垂直起降机场设计"></h3>
         
-        <!--Image size is 1600 * 900-->
-        <div class="carousel-images">
-          <img class="project-image" src="../images/portfolio/vertiport/model1.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/moo.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Truss.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Cablenet.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Karamba.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Load.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Deflection.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/render 3.png" />
+        <!--Description-->
+        <p data-lang-en="This project is a vertiport for drones located at Pier 52 east of San Fransisco, 10 miles north of San Fransisco International Airport (SFO). A steel truss with the cable net structure was developed to fit into the site conditions. We applied form-finding methods on both the truss and the cable-net, and optimized the structure based on structural analysis methods."
+        data-lang-cn="该项目是位于旧金山东部52号码头的无人机垂直起降港，距离旧金山国际机场（SFO）以北10英里。项目开发了适应场地条件的钢桁架与索网结构。我们对桁架和索网应用了形态寻找方法，并基于结构分析方法优化了该结构。"></p>
+        <br>
+
+        <!--Start of one chapter-->
+        <div class="carousel">
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          
+          <!--Image size is 1600 * 900-->
+          <div class="carousel-images">
+            <img class="project-image" src="../images/portfolio/vertiport/model1.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/moo.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/Truss.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/Cablenet.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/Karamba.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/Load.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/Deflection.png" />
+            <img class="project-image" src="../images/portfolio/vertiport/render 3.png" />
+          </div>
+          
+          <button class="next" onclick="nextSlide()">&#10095;</button>
         </div>
-        
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-      </div>
-      <script src="../scripts/slide.js"></script>
- 
-      
-      <!--End of one chapter-->
-
-      <!--Information-->
-      <small data-lang-en="________________________________________________________
-      Academic Work, ARCH 229 Creative ML Innovation Lab
-      Instructor: Prof. Simon Schleicher
-      Site: San Fransisco, CA, US
-      Group Work; Group Member: Fredric Lam, Yuan Xu, Moritz Rietschel
-      Tools: Rhino, Grasshopper (Kangaroo Physics, Karamba 3D) "
-      data-lang-cn="________________________________________________________
-      课程项目，ARCH 229 Creative ML Innovation Lab
-      指导：Prof. Simon Schleicher
-      地点：美国加利福尼亚州旧金山
-      小组作业；组员：Fredric Lam, Yuan Xu, Moritz Rietschel
-      个人贡献：结构设计（50%）、结构分析（100%）
-      使用工具：Rhino、Grasshopper（Kangaroo Physics、Karamba 3D）"></small>
-    </div>
-  </div>
-  <!--END of project-->
+        <script src="../scripts/slide.js"></script>
   
-  <!--This is the START of the related-work-->
-  <div class="related-work">
-    <h5 data-lang-en="Related Works" data-lang-cn="相关作品">Other Works</h5>
-    <br>
-    <div id="container-p">
-      <ul id="stage">
-        <!--Weaving Structure-->
-        <li data-tags="Architecture, Structures">
-          <a href="../projects/weaving_structure.html">
-            <img src="../images/portfolio/cover/Weaving.png" alt="Illustration" />
-            <div class="overlay">
-              <p data-lang-en="Large-Scale Bending-Active Structure Design" 
-                data-lang-cn="大跨度弹性自找形结构设计">About</p>
-              </div>
-            </a>
-          <h5 data-lang-en="Weaving Structure" data-lang-cn="编织结构建筑设计"></h5>
-        </li>
+        
+        <!--End of one chapter-->
 
-        <!--Lapping Structure-->
-        <li data-tags="Architecture, Structures">
-          <a href="../projects/white_noise.html">
-            <img src="../images/portfolio/cover/lapping.png" alt="Illustration" />
-            <div class="overlay">
-              <p data-lang-en="Proposing a Novel 3-Dimensional Rod-Composed Structural System" 
-                data-lang-cn="新型三维杆构结构系统">About</p>
-              </div>
-            </a>
-          <h5 data-lang-en="Lapping Structure" data-lang-cn="搭接杆件结构设计"></h5>
-        </li>
-
-        <!--Kesi-->
-        <li data-tags="Architecture">
-          <a href="../projects/kesi_pavilion.html">
-            <img src="../images/portfolio/cover/Kesi.png" alt="Illustration" />
-            <div class="overlay">
-              <p data-lang-en="Parametric design pavilion (Intern work)" 
-                data-lang-cn="参数化设计（实习作品）">About</p>
-              </div>
-            </a>
-          <h5 data-lang-en="Silk Tapestry Pavilion" data-lang-cn="定州园博园缂丝馆"></h5>
-        </li>
-    
-      </ul>
+        <!--Information-->
+        <small data-lang-en="________________________________________________________
+        Academic Work, ARCH 229 Creative ML Innovation Lab
+        Instructor: Prof. Simon Schleicher
+        Site: San Fransisco, CA, US
+        Group Work; Group Member: Fredric Lam, Yuan Xu, Moritz Rietschel
+        Tools: Rhino, Grasshopper (Kangaroo Physics, Karamba 3D) "
+        data-lang-cn="________________________________________________________
+        课程项目，ARCH 229 Creative ML Innovation Lab
+        指导：Prof. Simon Schleicher
+        地点：美国加利福尼亚州旧金山
+        小组作业；组员：Fredric Lam, Yuan Xu, Moritz Rietschel
+        个人贡献：结构设计（50%）、结构分析（100%）
+        使用工具：Rhino、Grasshopper（Kangaroo Physics、Karamba 3D）"></small>
+      </div>
     </div>
+    <!--END of project-->
+    
+    <!--This is the START of the related-work-->
+    <div class="related-work">
+      <h5 data-lang-en="Related Works" data-lang-cn="相关作品">Other Works</h5>
+      <br>
+      <div id="container-p">
+        <ul id="stage">
+          <!--Weaving Structure-->
+          <li data-tags="Architecture, Structures">
+            <a href="../projects/weaving_structure.html">
+              <img src="../images/portfolio/cover/Weaving.png" alt="Illustration" />
+              <div class="overlay">
+                <p data-lang-en="Large-Scale Bending-Active Structure Design" 
+                  data-lang-cn="大跨度弹性自找形结构设计">About</p>
+                </div>
+              </a>
+            <h5 data-lang-en="Weaving Structure" data-lang-cn="编织结构建筑设计"></h5>
+          </li>
+
+          <!--Lapping Structure-->
+          <li data-tags="Architecture, Structures">
+            <a href="../projects/white_noise.html">
+              <img src="../images/portfolio/cover/lapping.png" alt="Illustration" />
+              <div class="overlay">
+                <p data-lang-en="Proposing a Novel 3-Dimensional Rod-Composed Structural System" 
+                  data-lang-cn="新型三维杆构结构系统">About</p>
+                </div>
+              </a>
+            <h5 data-lang-en="Lapping Structure" data-lang-cn="搭接杆件结构设计"></h5>
+          </li>
+
+          <!--Kesi-->
+          <li data-tags="Architecture">
+            <a href="../projects/kesi_pavilion.html">
+              <img src="../images/portfolio/cover/Kesi.png" alt="Illustration" />
+              <div class="overlay">
+                <p data-lang-en="Parametric design pavilion (Intern work)" 
+                  data-lang-cn="参数化设计（实习作品）">About</p>
+                </div>
+              </a>
+            <h5 data-lang-en="Silk Tapestry Pavilion" data-lang-cn="定州园博园缂丝馆"></h5>
+          </li>
+      
+        </ul>
+      </div>
+    </div>
+    <!--END of gallery-->
   </div>
-  <!--END of gallery-->
+  <!--END of content-->
 </div>
-<!--END of content-->
 </body>
 </html>

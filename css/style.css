@@ -73,10 +73,10 @@ General CSS
 									
 #content {
 	flex:0.9;
-	padding-right: 70px;
+	padding-right: 50px;
 	padding-top: 20px;
-	margin-left: 200px;
 	z-index: 0;
+	background-color: #ffffff;
 }
 small {
 	font-family: 'Calibri Light', Verdana, Arial, sans-serif;
@@ -143,68 +143,13 @@ h6 {
 COLUMNS and FEATURES
 ***************************************************/
 
-.one, .one-half, .two-third, .one-third, .one-fourth {
-    float: none;
-    display: flex;
-    flex: 0.9;
-    margin-right: 0;
-    box-sizing: border-box; 
-}
-
-.one {
-    flex-basis: 90%;
-}
-
-.one-half {
-    flex-basis: 45%;
-}
-
-.two-third {
-    flex-basis: 60%;
-}
-
-.one-third {
-    flex-basis: 30%;
-}
-
-.one-fourth {
-    flex-basis: 21.6%;
-}
-
-.one-half-last, .two-third-last, .one-third-last, .one-fourth-last {
-    float: none;
-    display: flex;
-    flex: 0.9;
-    margin-right: 0;
-    box-sizing: border-box;
-}
-
-.one-half-last {
-    flex-basis: 45%;
-}
-
-.two-third-last {
-    flex-basis: 60%;
-}
-
-.one-third-last {
-    flex-basis: 30%;
-}
-
-.one-fourth-last {
-    flex-basis: 21.6%;
-}
 
 .container {
     display: flex;
     flex-wrap: wrap; 
 }
 
-/* 让最后一个元素没有右边距 */
-.one-half:nth-last-child(2), .two-third:nth-last-child(2), .one-third:nth-last-child(2), .one-fourth:nth-last-child(2),
-.one-half-last:nth-last-child(2), .two-third-last:nth-last-child(2), .one-third-last:nth-last-child(2), .one-fourth-last:nth-last-child(2) {
-    margin-right: 0;
-}
+
 .clear {
 	clear: both;
 }
@@ -219,19 +164,38 @@ COLUMNS and FEATURES
 }
 
 /******************************************************************
+Layout
+******************************************************************/
+.layout {
+    display: grid;
+    grid-template-columns: 20% 1fr; /* 左侧菜单 + 主内容 */
+    height: 100vh; /* 满屏高度 */
+}
+
+/******************************************************************
 Header & Menu CSS
 ******************************************************************/
 #menu-wrapper {
-    height: 100vh; /* 让菜单区域的高度覆盖整个视口 */
-    width: 16.67%;
-    background: #ffffff00; /* 设置背景颜色 */
+    background: #ffffff; /* 设置背景颜色 */
     float: left;
-    position: fixed; /* 确保菜单区域始终固定在页面左侧 */
+    position: relative; /* 确保菜单区域始终固定在页面左侧 */
     top: 0;
     left: 0;
+	display: block;
+	width: 18%; /* 菜单宽度 */
+}
+@media (max-width: 1250px) {
+    .layout {
+        grid-template-columns: 1fr; /* 只有主内容 */
+    }
+
+    #menu-wrapper {
+        display: none; /* 隐藏菜单 */
+    }
 }
 
 #profile {
+	background-color: #ffffff;
     text-align: left;
     margin-bottom: 10px;
     position: fixed;
@@ -239,6 +203,7 @@ Header & Menu CSS
 	padding-left: 30px;
     padding: 20px 0;
     z-index: 1000; /* 确保它在其他内容上方 */
+	width: 20%; /* 菜单宽度 */
 }
 #profile-photo {
     width: 120px;
@@ -258,6 +223,11 @@ Header & Menu CSS
     margin: 0px 30px;
     font-size: 16px;
     color: #666;
+    /* 控制文本溢出 */
+    white-space: nowrap;       /* 禁止换行 */
+    overflow: hidden;          /* 隐藏溢出部分 */
+    text-overflow: ellipsis;   /* 超出部分显示省略号 */
+    max-width: 100%;           /* 可选：限制最大宽度 */
 }
 
 #profile a {
@@ -305,7 +275,7 @@ Welcome CSS
     text-align: center; 
     padding: 10px; 
     font-family: 'Calibri Light', Verdana, Arial, sans-serif; 
-    padding-left: 7%;
+    padding-left: 2%;
     padding-right: 7%;
 }
 
@@ -325,7 +295,7 @@ About us CSS
 	padding-top: 15px;
 	flex:1;
 	padding-bottom: 15px;
-	padding-left: 7%;
+	padding-left: 2%;
 	padding-right: 7%;
 	line-height: 1.5;
 }
@@ -338,15 +308,16 @@ Portfolio CSS
 	padding-top: 15px;
 	flex:1;
 	padding-bottom: 0px;
-	padding-left: 7%;
+	padding-left: 2%;
 	padding-right: 7%;
+	flex-wrap: wrap;
 }
 
 
 /*************Filter****************/
 #filter {
 	display: block;
-	height: 30px;
+
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0px;
@@ -399,7 +370,7 @@ Portfolio CSS
 	overflow: hidden;
 	flex-wrap: wrap;
 	margin: 0;
-	padding-left: 5%;
+	padding-left: 1%;
 	padding-right: 5%;
 }
 
@@ -414,14 +385,14 @@ Portfolio CSS
 	flex-direction: column;
 	justify-content: top; /* 垂直居中内容 */
 	align-items: center;     /* 水平居中内容 */
-	width: 420px;  /* 增加宽度 */
-	height: 320px; /* 增加高度 */
+	width: 380px;  /* 增加宽度 */
+	height: 300px; /* 增加高度 */
 	overflow: hidden; /* 确保子元素不溢出 */
 }
 
 #container li img {
-	width: 420px;  /* 增加宽度 */
-	height: 280px; /* 增加高度 */
+	width: 380px;  /* 增加宽度 */
+	height: 250px; /* 增加高度 */
 	object-fit: cover; /* 保持比例，裁剪超出部分 */
 	display: block;
 	border-radius: 5px;
@@ -433,7 +404,7 @@ Portfolio CSS
 	top: 0;
 	left: 0px;
 	width: 100%;
-	height: 280px;
+	height: 250px;
 	background: rgba(0, 0, 0, 0.7); /* 灰色蒙版 */
 	color: white;
 	display: flex;
@@ -486,8 +457,8 @@ This CSS is for the project page
 .project {
 	flex:1;
 	padding-top: 0px;
-	padding-right: 20%;
-	padding-left: 8%;
+	padding-right: 25%;
+	padding-left: 2%;
 }
 .project p {
 	text-align: justify;
@@ -556,7 +527,7 @@ button.next {
 	padding-top: 30px;
 	text-align: left;
 	margin-bottom: 20px; /* 添加底部外边距 */
-	padding-left: 8%;
+	padding-left: 2%;
 }
 
 #description h6 {

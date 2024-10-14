@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaoyi Wang</title>
 <link rel="shortcut icon" href="../icon.ico" />
 <!-- Load CSS -->
@@ -19,31 +20,10 @@
 <script src="../scripts/switch_language.js"></script>
 <!--END of header-->
 
-<!--This is the START of the menu-->
-<div id="menu-wrapper">
-	<div id="profile">
-      <img src="../images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
-      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
-      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
-    </div>
-	<div id="main-menu">
-		<ul>
-			<ul>
-        <li><a href="../index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页">Home</a></li>
-        <li><a href="../index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
-        <li><a class='selected' href="../index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
-        <li><a href="../resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
-      </ul>
-		</ul>
-	</div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<h6>© 2024 - Shaoyi Wang</h6>
-	</div>
-	<!--END of footer-->
-</div>
-<!--END of menu-->
+<div class="layout">
+  <div id="menu-placeholder"></div>
+  <script src="../scripts/project_menu.js"></script>
+
 <!--This is the START of the content-->
 <div id="content">
   <!--This is the START of the project-->
@@ -137,5 +117,6 @@
   <!--END of gallery-->
 </div>
 <!--END of content-->
+</div>
 </body>
 </html>

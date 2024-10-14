@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaoyi Wang</title>
 <link rel="shortcut icon" href="../icon.ico" />
 <!-- Load CSS -->
@@ -19,31 +20,10 @@
 <script src="../scripts/switch_language.js"></script>
 <!--END of header-->
 
-<!--This is the START of the menu-->
-<div id="menu-wrapper">
-	<div id="profile">
-      <img src="../images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
-      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
-      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
-    </div>
-	<div id="main-menu">
-		<ul>
-			<ul>
-        <li><a href="../index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页">Home</a></li>
-        <li><a href="../index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
-        <li><a class='selected' href="../index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
-        <li><a href="../resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
-      </ul>
-		</ul>
-	</div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<h6>© 2024 - Shaoyi Wang</h6>
-	</div>
-	<!--END of footer-->
-</div>
-<!--END of menu-->
+<div class="layout">
+  <div id="menu-placeholder"></div>
+  <script src="../scripts/project_menu.js"></script>
+
 <!--This is the START of the content-->
 <div id="content">
   <!--This is the START of the project-->
@@ -56,8 +36,8 @@
       <h3 data-lang-en="Self-Glowing Lamp" data-lang-cn="自发光装饰灯"></h3>
       
       <!--Description-->
-      <p data-lang-en="Description."
-      data-lang-cn="简介。"></p>
+      <p data-lang-en="Using bioluminescence as an alternative lighting source has garnered considerable interest due to its sustainability and unique aesthetic appeal. In this project, a sustainable bioluminescence lamp was conceptualized and developed using 3D printing technology via the Stereolithography (SLA) method. A Voronoi shape was used, strategically shaping the lamp's structure to enable maximum contact with the environment. The lamp can be charged under sunlight during the day and glow in darkness during the night."
+      data-lang-cn="将生物发光作为替代光源因其可持续性和独特的美学吸引力而备受关注。在本项目中，利用立体光（SLA）3D打印技术构思并开发了一款可持续的生物发光灯。灯具的结构采用了沃罗诺伊（Voronoi）形态，以优化与环境的接触面积。该灯白天可通过阳光充电，夜晚则在黑暗中发光。"></p>
       <br>
 
       <!--Start of one chapter-->
@@ -66,14 +46,11 @@
         
         <!--Image size is 1600 * 900-->
         <div class="carousel-images">
-          <img class="project-image" src="../images/portfolio/weaving/render1.png" />
-          <img class="project-image" src="../images/portfolio/weaving/background.png" />
-          <img class="project-image" src="../images/portfolio/weaving/unit.png" />
-          <img class="project-image" src="../images/portfolio/weaving/formation.png" />
-          <img class="project-image" src="../images/portfolio/weaving/optimization.png" />
-          <img class="project-image" src="../images/portfolio/weaving/simulation.png" />
-          <img class="project-image" src="../images/portfolio/weaving/section.png" />
-          <img class="project-image" src="../images/portfolio/weaving/Portfolio_Intern_Shaoyi Wang_12.png 3.png" />
+          <img class="project-image" src="../images/portfolio/lamp/1.png" />
+          <img class="project-image" src="../images/portfolio/lamp/2.png" />
+          <img class="project-image" src="../images/portfolio/lamp/3.png" />
+          <img class="project-image" src="../images/portfolio/lamp/4.png" />
+          <img class="project-image" src="../images/portfolio/lamp/5.png" />
         </div>
         
         <button class="next" onclick="nextSlide()">&#10095;</button>
@@ -85,18 +62,17 @@
 
       <!--Information-->
       <small data-lang-en="________________________________________________________
-      Academic Work, ARCH 252 Form and Structure Project
-      Instructor: Prof. Simon Schleicher
-      Site: San Fransisco, CA, US
-      Group Work; Group Member: Fredric Lam, Yuan Xu, Moritz 
-      Tools: Rhino, Grasshopper (Kangaroo Physics, Karamba 3D) "
-      data-lang-cn="
-      课程项目，ARCH 252 Form and Structure Project
-      指导：Prof. Simon Schleicher
-      地点：美国加利福尼亚州旧金山
-      小组作业；组员：Fredric Lam, Yuan Xu, Moritz Rietschel
-      个人贡献：结构设计（50%）、结构分析（100%）
-      使用工具：Rhino、Grasshopper（Kangaroo Physics、Karamba 3D）"></small>
+      MATSCI 228 Additive Fabrication Processes and Systems for Advanced Materials
+      Instructor: Prof. Xiaoyu Zheng
+      Group Work; Group Member: Sourabh Maheshwary
+      Contribution: Design (50%), 3D Printing (100%)
+      Tools: Rhino, Grasshopper"
+      data-lang-cn="________________________________________________________
+      MATSCI 228：高级材料的增材制造工艺与系统
+      指导教师：Prof. Xiaoyu Zheng
+      小组项目；组员：Sourabh Maheshwary
+      个人贡献：设计（50%），3D打印（100%）
+      使用工具：Rhino，Grasshopper"></small>
     </div>
   </div>
   <!--END of project-->
@@ -107,24 +83,28 @@
     <br>
     <div id="container-p">
       <ul id="stage">
-        <li data-tags="Architecture, Structures">
-          <a href="project-sample.html">
-            <img src="../images/portfolio/cover/Weaving.png" alt="Illustration" />
+        <!--Bamboo-->
+        <li data-tags="Architecture">
+          <a href="bamboo.html">
+            <img src="../images/portfolio/cover/bamboo.png" alt="Illustration" />
             <div class="overlay">
-              <p>Introduction</p>
-              </div>
+              <p data-lang-en="THE 1st BFU INTERNATIONAL GARDEN-MAKING FESTIVAL" 
+                data-lang-cn="2018首届北林国际花园建造节">About</p>
+            </div>
             </a>
-          <h5>Weaving Structure</h5>
+          <h5 data-lang-en="Bamboo Garden: After Review" data-lang-cn="竹境 花园"></h5>
         </li>
 
+        <!--Monohull-->
         <li data-tags="Robotics">
-          <a href="project-sample.html">
-            <img src="../images/portfolio/cover/Winding.png" alt="Illustration">
-            <div class="overlay">
-            <p>Introduction</p>
-            </div>
+          <a href="monohull.html">
+          <img src="../images/portfolio/cover/Winding.png" alt="Illustration">
+          <div class="overlay">
+            <p data-lang-en="Robotic Fabrication on Fiber-Winding" 
+                data-lang-cn="机械臂建造">About</p>
+          </div>
           </a>
-          <h5>Fiberwinding Monohull</h5>
+          <h5 data-lang-en="Fiber-Winding Monohull" data-lang-cn="纤维缠绕单体船"></h5>
         </li>
     
       </ul>
@@ -133,5 +113,6 @@
   <!--END of gallery-->
 </div>
 <!--END of content-->
+</div>
 </body>
 </html>

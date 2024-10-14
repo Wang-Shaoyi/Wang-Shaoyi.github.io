@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shaoyi Wang</title>
 <link rel="shortcut icon" href="../icon.ico" />
 <!-- Load CSS -->
@@ -19,31 +20,10 @@
 <script src="../scripts/switch_language.js"></script>
 <!--END of header-->
 
-<!--This is the START of the menu-->
-<div id="menu-wrapper">
-	<div id="profile">
-      <img src="../images/Shaoyi_Photo.jpg" alt="Your Photo" id="profile-photo">
-      <h2 data-lang-en="Shaoyi Wang" data-lang-cn="王劭仪">Shaoyi Wang</h2>
-      <p data-lang-en="MS in Architecture Candidate" data-lang-cn="建筑学硕士">MS in Architecture Candidate</p>
-      <p><a href="mailto:your-email@example.com">shaoyiwang@berkeley.edu</a></p>
-    </div>
-	<div id="main-menu">
-		<ul>
-			<ul>
-        <li><a href="../index.html#index" data-lang-en="🏠️ Home" data-lang-cn="🏠️ 首页">Home</a></li>
-        <li><a href="../index.html#about" data-lang-en="👋 About" data-lang-cn="👋 简介">About</a></li>
-        <li><a class='selected' href="../index.html#portfolio" data-lang-en="🖼️ Portfolio" data-lang-cn="🖼️ 作品">Portfolio</a></li>
-        <li><a href="../resume.html" data-lang-en="📜 Resume" data-lang-cn="📜 简历">Resume</a></li>
-      </ul>
-		</ul>
-	</div>
-	<!--This is the START of the footer-->
-	<div id="footer">
-		<h6>© 2024 - Shaoyi Wang</h6>
-	</div>
-	<!--END of footer-->
-</div>
-<!--END of menu-->
+<div class="layout">
+  <div id="menu-placeholder"></div>
+  <script src="../scripts/project_menu.js"></script>
+
 <!--This is the START of the content-->
 <div id="content">
   <!--This is the START of the project-->
@@ -56,8 +36,11 @@
       <h3 data-lang-en="White-Noise Apartment" data-lang-cn="白噪音公寓"></h3>
       
       <!--Description-->
-      <p data-lang-en="Description."
-      data-lang-cn="简介。"></p>
+      <p data-lang-en="White noise refers to a noise that contains all frequencies across the spectrum of audible sound in equal measure. White noise creates a pleasant acoustic atmosphere and benefits people's mental health. With the prevalence of the epidemic, people are working and living in the same space in order to isolate themselves from the virus. Our outer connections to the external world has been limited to the Internet, while inner environments with families has become the only place people can get in touch with real people. People are facing a series of mental problems with this transition of life.
+      This work attempted to create several authentic white noise environmentsand delineate different functional spaces through the characteristics of white noise to create suitable atmospheres and enhance people's concentration. White noise creates connections between people, although they are not in the same physical space."
+      data-lang-cn="白噪音是指包含整个可听声音频谱中所有频率且分布均匀的一种噪音。白噪音能够营造令人愉悦的声学氛围，并有助于提升人们的心理健康。随着疫情的蔓延，人们为了隔离病毒，不得不在同一个空间中工作和生活。我们与外界的联系被限制在互联网范围内，而与家人的互动成为人们唯一能与真实人物接触的途径。这种生活方式的转变，给人们带来了一系列心理问题。
+      
+      本作品试图通过白噪音的特性创造多个真实的白噪音环境，并划分出不同功能的空间，以营造适宜的氛围，提升人们的专注力。即使人们不在同一物理空间内，白噪音仍能在他们之间建立一种连接。"></p>
       <br>
 
       <!--Start of one chapter-->
@@ -66,14 +49,12 @@
         
         <!--Image size is 1600 * 900-->
         <div class="carousel-images">
-          <img class="project-image" src="../images/portfolio/vertiport/model1.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/moo.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Truss.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Cablenet.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Karamba.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Load.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/Deflection.png" />
-          <img class="project-image" src="../images/portfolio/vertiport/render 3.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/1.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/2.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/3.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/4.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/5.png" />
+          <img class="project-image" src="../images/portfolio/whitenoise/6.png" />
         </div>
         
         <button class="next" onclick="nextSlide()">&#10095;</button>
@@ -85,18 +66,21 @@
 
       <!--Information-->
       <small data-lang-en="________________________________________________________
-      Academic Work, ARCH 252 Form and Structure Project
-      Instructor: Prof. Simon Schleicher
-      Site: San Fransisco, CA, US
-      Group Work; Group Member: Fredric Lam, Yuan Xu, Moritz 
-      Tools: Rhino, Grasshopper (Kangaroo Physics, Karamba 3D) "
-      data-lang-cn="
-      课程项目，ARCH 252 Form and Structure Project
-      指导：Prof. Simon Schleicher
-      地点：美国加利福尼亚州旧金山
-      小组作业；组员：Fredric Lam, Yuan Xu, Moritz Rietschel
-      个人贡献：结构设计（50%）、结构分析（100%）
-      使用工具：Rhino、Grasshopper（Kangaroo Physics、Karamba 3D）"></small>
+      Option Studio, Academic Work, Spring 2021
+      Course Name: Architectural Design (6)
+      Modified in Spring 2022
+      Duration: 8 Weeks
+      Instructor: Quan Jing
+      Site: Hefei City, Anhui Province
+      Individual Work "
+      data-lang-cn="________________________________________________________
+      学术作品，2021年春季
+      课程名称：建筑设计（6）
+      修改时间：2022年春季
+      项目周期：8周
+      指导教师：景泉
+      地点：安徽省合肥市
+      个人作品"></small>
     </div>
   </div>
   <!--END of project-->
@@ -107,24 +91,16 @@
     <br>
     <div id="container-p">
       <ul id="stage">
-        <li data-tags="Architecture, Structures">
-          <a href="project-sample.html">
-            <img src="../images/portfolio/cover/Weaving.png" alt="Illustration" />
+        <!--Kesi-->
+        <li data-tags="Architecture">
+          <a href="kesi_pavilion.html">
+            <img src="../images/portfolio/cover/Kesi.png" alt="Illustration" />
             <div class="overlay">
-              <p>Introduction</p>
-              </div>
-            </a>
-          <h5>Weaving Structure</h5>
-        </li>
-
-        <li data-tags="Robotics">
-          <a href="project-sample.html">
-            <img src="../images/portfolio/cover/Winding.png" alt="Illustration">
-            <div class="overlay">
-            <p>Introduction</p>
+              <p data-lang-en="Parametric design pavilion (Intern work)" 
+                data-lang-cn="参数化设计（实习作品）">About</p>
             </div>
-          </a>
-          <h5>Fiberwinding Monohull</h5>
+            </a>
+          <h5 data-lang-en="Silk Tapestry Pavilion" data-lang-cn="定州园博园缂丝馆"></h5>
         </li>
     
       </ul>
@@ -133,5 +109,6 @@
   <!--END of gallery-->
 </div>
 <!--END of content-->
+</div>
 </body>
 </html>
