@@ -703,6 +703,7 @@ This is the buttons and inputs CSS
 	overflow: auto;
 	margin-left: 40px;
 	margin-right: 40px;
+	padding-right: 7%;
 }
 iframe {
 	width: 100%;
