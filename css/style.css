@@ -708,4 +708,6 @@ This is the buttons and inputs CSS
 iframe {
 	width: 100%;
 	height: 1200px;
+	padding-left: 2%;
+    padding-right: 7%;
 }
